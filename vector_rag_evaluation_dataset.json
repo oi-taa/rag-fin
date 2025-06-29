@@ -1,0 +1,230 @@
+{
+  "metadata": {
+    "dataset_name": "ICICI Bank RAG Evaluation - Test Subset",
+    "total_questions": 15,
+    "created_date": "2025-06-27",
+    "description": "Representative 15-question subset for testing vector RAG evaluation framework",
+    "expected_chunks": [
+      "Q1_FY2024_profitability_analysis",
+      "Q1_FY2024_balance_sheet_analysis", 
+      "Q1_FY2024_financial_ratios",
+      "Q1_FY2024_segment_analysis",
+      "Q2_FY2024_profitability_analysis",
+      "Q2_FY2024_balance_sheet_analysis",
+      "Q2_FY2024_financial_ratios", 
+      "Q2_FY2024_segment_analysis",
+      "Q3_FY2024_profitability_analysis",
+      "Q3_FY2024_balance_sheet_analysis",
+      "Q3_FY2024_financial_ratios",
+      "Q3_FY2024_segment_analysis",
+      "Q4_FY2024_profitability_analysis",
+      "Q4_FY2024_balance_sheet_analysis",
+      "Q4_FY2024_financial_ratios",
+      "Q4_FY2024_segment_analysis"
+    ]
+  },
+  
+  "evaluation_questions": [
+    {
+      "id": "Q001",
+      "category": "direct_fact_retrieval", 
+      "difficulty": "easy",
+      "question": "What was ICICI Bank's net profit in Q1 FY2024?",
+      "expected_answer": "₹10,636 crore",
+      "ground_truth": "ICICI Bank's net profit in Q1 FY2024 was ₹10,636 crore with 44.0% YoY growth.",
+      "expected_chunks": ["Q1_FY2024_profitability_analysis"],
+      "expected_chunk_relevance": "high",
+      "reasoning": "Direct lookup of specific metric from single chunk"
+    },
+    {
+      "id": "Q003",
+      "category": "direct_fact_retrieval",
+      "difficulty": "easy", 
+      "question": "What was the Basic EPS for Q3 FY2024?",
+      "expected_answer": "₹15.77 per share",
+      "ground_truth": "Basic EPS for Q3 FY2024 was ₹15.77 per share with 25.1% YoY growth.",
+      "expected_chunks": ["Q3_FY2024_financial_ratios"],
+      "expected_chunk_relevance": "high",
+      "reasoning": "EPS is directly available in ratios chunk"
+    },
+    {
+      "id": "Q021",
+      "category": "direct_fact_retrieval",
+      "difficulty": "easy",
+      "question": "What was the diluted EPS for Q2 FY2024?", 
+      "expected_answer": "₹15.27 per share",
+      "ground_truth": "Diluted EPS for Q2 FY2024 was ₹15.27 per share.",
+      "expected_chunks": ["Q2_FY2024_financial_ratios"],
+      "expected_chunk_relevance": "high",
+      "reasoning": "Direct EPS lookup from ratios chunk"
+    },
+    {
+      "id": "Q031",
+      "category": "direct_fact_retrieval",
+      "difficulty": "easy",
+      "question": "What was the provisions amount for Q1 FY2024?",
+      "expected_answer": "₹1,345 crore", 
+      "ground_truth": "Provisions for Q1 FY2024 were ₹1,345 crore.",
+      "expected_chunks": ["Q1_FY2024_profitability_analysis"],
+      "expected_chunk_relevance": "high",
+      "reasoning": "Provisions directly stated in profitability chunk"
+    },
+    {
+      "id": "Q006", 
+      "category": "single_quarter_analysis",
+      "difficulty": "medium",
+      "question": "How did the retail banking segment perform in Q2 FY2024?",
+      "expected_answer": "Revenue ₹33,080 crore (34.9%), Segment Result ₹4,896 crore, Margin 14.8%",
+      "ground_truth": "Retail banking in Q2 FY2024: Revenue ₹33,080 crore (34.9% of total), Segment Result ₹4,896 crore, achieving 14.8% margin.",
+      "expected_chunks": ["Q2_FY2024_segment_analysis"],
+      "expected_chunk_relevance": "high",
+      "reasoning": "All retail banking data available in Q2 segment chunk"
+    },
+    {
+      "id": "Q009",
+      "category": "pre_calculated_ratios", 
+      "difficulty": "medium",
+      "question": "What was the operating margin for Q1 FY2024?",
+      "expected_answer": "30.1%",
+      "ground_truth": "Operating margin for Q1 FY2024 was 30.1%.",
+      "expected_chunks": ["Q1_FY2024_profitability_analysis"],
+      "expected_chunk_relevance": "high",
+      "reasoning": "Operating margin pre-calculated in profitability chunk"
+    },
+    {
+      "id": "Q011",
+      "category": "segment_specific",
+      "difficulty": "medium", 
+      "question": "What was the treasury segment margin in Q3 FY2024?",
+      "expected_answer": "10.9%",
+      "ground_truth": "Treasury segment margin in Q3 FY2024 was 10.9% with revenue of ₹29,356 crore.",
+      "expected_chunks": ["Q3_FY2024_segment_analysis"],
+      "expected_chunk_relevance": "high",
+      "reasoning": "Treasury data available in segment analysis"
+    },
+    {
+      "id": "Q013",
+      "category": "yoy_growth",
+      "difficulty": "medium",
+      "question": "What was the YoY growth in net profit for Q1 FY2024?", 
+      "expected_answer": "44.0%",
+      "ground_truth": "Net profit YoY growth for Q1 FY2024 was 44.0%.",
+      "expected_chunks": ["Q1_FY2024_profitability_analysis"],
+      "expected_chunk_relevance": "high",
+      "reasoning": "YoY growth pre-calculated in profitability chunk"
+    },
+    {
+      "id": "Q015",
+      "category": "balance_sheet",
+      "difficulty": "medium",
+      "question": "What was the total assets figure for Q3 FY2024?",
+      "expected_answer": "₹2,208,018 crore",
+      "ground_truth": "Total assets for Q3 FY2024 was ₹2,208,018 crore.", 
+      "expected_chunks": ["Q3_FY2024_balance_sheet_analysis"],
+      "expected_chunk_relevance": "high",
+      "reasoning": "Total assets directly stated in balance sheet chunk"
+    },
+    {
+      "id": "Q022",
+      "category": "single_quarter_analysis",
+      "difficulty": "medium",
+      "question": "What was the life insurance segment performance in Q4 FY2024?",
+      "expected_answer": "Revenue ₹17,935 crore (16.4%), Segment Result ₹244 crore, Margin 1.4%",
+      "ground_truth": "Life Insurance segment Q4 FY2024: Revenue ₹17,935 crore (16.4% of total), Segment Result ₹244 crore, Margin 1.4%.",
+      "expected_chunks": ["Q4_FY2024_segment_analysis"],
+      "expected_chunk_relevance": "high",
+      "reasoning": "Life insurance data in Q4 segment chunk"
+    },
+    {
+      "id": "Q016",
+      "category": "multiple_metrics",
+      "difficulty": "hard",
+      "question": "What were the key profitability metrics for Q1 FY2024?",
+      "expected_answer": "Net profit ₹10,636 crore, Operating profit ₹15,660 crore, Net margin 20.4%, Operating margin 30.1%", 
+      "ground_truth": "Q1 FY2024 key profitability: Net profit ₹10,636 crore (+44% YoY), Operating profit ₹15,660 crore, Net margin 20.4%, Operating margin 30.1%.",
+      "expected_chunks": ["Q1_FY2024_profitability_analysis"],
+      "expected_chunk_relevance": "high",
+      "reasoning": "Multiple metrics from same chunk - may be incomplete"
+    },
+    {
+      "id": "Q018",
+      "category": "cross_chunk",
+      "difficulty": "hard",
+      "question": "How did net profit margins change from Q1 to Q2 FY2024?",
+      "expected_answer": "Q1: 20.4%, Q2: 19.0% (declined by 1.4 percentage points)",
+      "ground_truth": "Net profit margin declined from 20.4% in Q1 FY2024 to 19.0% in Q2 FY2024, a decrease of 1.4 percentage points.",
+      "expected_chunks": ["Q1_FY2024_profitability_analysis", "Q2_FY2024_profitability_analysis"],
+      "expected_chunk_relevance": "medium",
+      "reasoning": "Requires retrieving data from two different chunks and comparing"
+    },
+    {
+      "id": "Q028",
+      "category": "multiple_metrics", 
+      "difficulty": "hard",
+      "question": "What were the income and expense totals for Q4 FY2024?",
+      "expected_answer": "Total Income ₹67,082 crore, Total Expenses ₹50,330 crore",
+      "ground_truth": "Q4 FY2024: Total Income ₹67,082 crore (+24.4% YoY), Total Expenses ₹50,330 crore.",
+      "expected_chunks": ["Q4_FY2024_profitability_analysis"],
+      "expected_chunk_relevance": "high",
+      "reasoning": "Both metrics in same profitability chunk"
+    },
+    {
+      "id": "Q020",
+      "category": "implicit_calculation",
+      "difficulty": "very_hard", 
+      "question": "What was the return on equity for Q1 FY2024?",
+      "expected_answer": "ROE calculation not directly available",
+      "ground_truth": "ROE would require net profit (₹10,636 crore) divided by shareholders' equity, but equity data may not be easily accessible.",
+      "expected_chunks": ["Q1_FY2024_profitability_analysis", "Q1_FY2024_balance_sheet_analysis"],
+      "expected_chunk_relevance": "low",
+      "reasoning": "Requires calculation using data from multiple chunks"
+    },
+    {
+      "id": "Q030",
+      "category": "implicit_calculation",
+      "difficulty": "very_hard",
+      "question": "What was the average segment margin across all segments in Q3 FY2024?",
+      "expected_answer": "Calculation required across all segments", 
+      "ground_truth": "Average margin calculation across Retail (12.6%), Wholesale (29.5%), Treasury (10.9%), Life Insurance (1.8%), Others (46.4%).",
+      "expected_chunks": ["Q3_FY2024_segment_analysis"],
+      "expected_chunk_relevance": "medium",
+      "reasoning": "Requires extracting all segment margins and calculating average"
+    }
+  ],
+  
+  "evaluation_criteria": {
+    "scoring_scale": "0-100%",
+    "metrics": {
+      "faithfulness": "Percentage of factually correct statements vs context data",
+      "context_precision": "Percentage of retrieved contexts that are relevant to the question", 
+      "context_recall": "Percentage of required information successfully retrieved",
+      "answer_relevancy": "Percentage of answer content that directly addresses the question",
+      "answer_correctness": "Percentage of answer facts that match the ground truth"
+    },
+    "expected_performance": {
+      "easy_questions": "70-85%",
+      "medium_questions": "55-75%", 
+      "hard_questions": "40-65%",
+      "very_hard_questions": "25-50%"
+    }
+  },
+  
+  "category_distribution": {
+    "direct_fact_retrieval": 4,
+    "single_quarter_analysis": 2,
+    "pre_calculated_ratios": 1,
+    "segment_specific": 1,
+    "yoy_growth": 1,
+    "balance_sheet": 1,
+    "multiple_metrics": 2,
+    "cross_chunk": 1,
+    "implicit_calculation": 2
+  },
+  
+  "difficulty_distribution": {
+    "easy": 4,
+    "medium": 6,
+    "hard": 3,
+    "very_hard": 2
+  }
+}

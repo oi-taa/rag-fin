@@ -1,0 +1,203 @@
+{
+  "company": "ICICI Bank Limited",
+  "reportType": "CONSOLIDATED FINANCIAL RESULTS",
+  "currency": "₹ in crore",
+  "periods": {
+    "threeMonthsEnded": {
+      "june2023": {
+        "date": "June 30, 2023 (Q1-2024)",
+        "status": "Unaudited"
+      },
+      "march2023": {
+        "date": "March 31, 2023 (Q4-2023)",
+        "status": "Audited"
+      },
+      "june2022": {
+        "date": "June 30, 2022 (Q1-2023)",
+        "status": "Unaudited"
+      }
+    },
+    "yearEnded": {
+      "march2023": {
+        "date": "March 31, 2023 (FY2023)",
+        "status": "Audited"
+      }
+    }
+  },
+  "consolidatedResults": {
+    "income": {
+      "interestEarned": {
+        "june2023": 37105.89,
+        "march2023": 34438.91,
+        "june2022": 26158.60,
+        "march2023Annual": 121066.81
+      },
+      "interestDiscountOnAdvancesBills": {
+        "june2023": 27087.69,
+        "march2023": 25353.68,
+        "june2022": 18453.74,
+        "march2023Annual": 87532.24
+      },
+      "incomeOnInvestments": {
+        "june2023": 8831.05,
+        "march2023": 7827.87,
+        "june2022": 6126.29,
+        "march2023Annual": 27905.03
+      },
+      "interestOnBalancesWithRBI": {
+        "june2023": 582.21,
+        "march2023": 707.14,
+        "june2022": 562.74,
+        "march2023Annual": 2305.46
+      },
+      "others": {
+        "june2023": 604.94,
+        "march2023": 550.22,
+        "june2022": 1015.83,
+        "march2023Annual": 2927.08
+      },
+      "otherIncome": {
+        "june2023": 14978.11,
+        "march2023": 19483.84,
+        "june2022": 13059.73,
+        "march2023Annual": 65111.99
+      },
+      "totalIncome": {
+        "june2023": 52084.00,
+        "march2023": 53922.75,
+        "june2022": 39218.33,
+        "march2023Annual": 186178.80
+      }
+    },
+    "expenses": {
+      "interestExpended": {
+        "june2023": 16367.66,
+        "march2023": 14479.47,
+        "june2022": 11089.06,
+        "march2023Annual": 50543.39
+      },
+      "operatingExpenses": {
+        "june2023": 20056.67,
+        "march2023": 24237.09,
+        "june2022": 17006.69,
+        "march2023Annual": 82439.02
+      },
+      "employeeCost": {
+        "june2023": 4811.33,
+        "march2023": 4248.00,
+        "june2022": 3587.18,
+        "march2023Annual": 15234.17
+      },
+      "otherOperatingExpenses": {
+        "june2023": 15245.34,
+        "march2023": 19989.09,
+        "june2022": 13419.51,
+        "march2023Annual": 67204.85
+      },
+      "totalExpenditure": {
+        "june2023": 36424.33,
+        "march2023": 38716.56,
+        "june2022": 28095.75,
+        "march2023Annual": 132982.41
+      }
+    },
+    "profitAndLoss": {
+      "operatingProfit": {
+        "june2023": 15659.67,
+        "march2023": 15206.19,
+        "june2022": 11122.58,
+        "march2023Annual": 53196.39
+      },
+      "provisions": {
+        "june2023": 1345.04,
+        "march2023": 1722.05,
+        "june2022": 1130.79,
+        "march2023Annual": 6939.93
+      },
+      "profitFromOrdinaryActivitiesBeforeTax": {
+        "june2023": 14314.63,
+        "march2023": 13484.14,
+        "june2022": 9991.79,
+        "march2023Annual": 46256.46
+      },
+      "addShareOfProfitInAssociates": {
+        "june2023": 251.04,
+        "march2023": 251.07,
+        "june2022": 211.26,
+        "march2023Annual": 998.29
+      },
+      "profitFromOrdinaryActivitiesBeforeTaxAndMinorityInterest": {
+        "june2023": 14565.67,
+        "march2023": 13735.21,
+        "june2022": 10203.05,
+        "march2023Annual": 47254.75
+      },
+      "taxExpenses": {
+        "june2023": 3551.22,
+        "march2023": 3498.92,
+        "june2022": 2504.86,
+        "march2023Annual": 11739.44
+      },
+      "currentTax": {
+        "june2023": 3507.57,
+        "march2023": 3178.06,
+        "june2022": 2483.77,
+        "march2023Annual": 11456.44
+      },
+      "deferredTax": {
+        "june2023": 43.65,
+        "march2023": 320.86,
+        "june2022": 21.09,
+        "march2023Annual": 337.00
+      },
+      "shareOfProfitLossOfMinorityShareholders": {
+        "june2023": 378.33,
+        "march2023": 383.59,
+        "june2022": 313.66,
+        "march2023Annual": 1424.67
+      },
+      "netProfitFromOrdinaryActivitiesAfterTax": {
+        "june2023": 10636.12,
+        "march2023": 9852.70,
+        "june2022": 7384.53,
+        "march2023Annual": 34090.64
+      },
+      "netProfitForThePeriod": {
+        "june2023": 10636.12,
+        "march2023": 9852.70,
+        "june2022": 7384.53,
+        "march2023Annual": 34090.64
+      }
+    },
+    "balanceSheetItems": {
+      "paidUpEquityShareCapital": {
+        "june2023": 1399.54,
+        "march2023": 1396.78,
+        "june2022": 1391.48,
+        "march2023Annual": 1396.78
+      },
+      "reservesExcludingRevaluationReserves": {
+        "june2023": 220658.14,
+        "march2023": 209248.29,
+        "june2022": 184692.05,
+        "march2023Annual": 209248.29
+      }
+    },
+    "ratios": {
+      "earningsPerShare": {
+        "basic": {
+          "june2023": 15.22,
+          "march2023": 14.12,
+          "june2022": 10.62,
+          "march2023Annual": 48.86
+        },
+        "diluted": {
+          "june2023": 14.91,
+          "march2023": 13.84,
+          "june2022": 10.41,
+          "march2023Annual": 47.84
+        }
+      }
+    }
+  }
+}

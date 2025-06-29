@@ -1,0 +1,293 @@
+{
+  "company": "ICICI Bank Limited",
+  "reportType": "CONSOLIDATED SEGMENTAL RESULTS",
+  "currency": "₹ in crore",
+  "periods": {
+    "threeMonthsEnded": {
+      "june2023": {
+        "date": "June 30, 2023 (Q1-2024)",
+        "status": "Unaudited"
+      },
+      "march2023": {
+        "date": "March 31, 2023 (Q4-2023)",
+        "status": "Unaudited"
+      },
+      "june2022": {
+        "date": "June 30, 2022 (Q1-2023)",
+        "status": "Unaudited"
+      }
+    },
+    "yearEnded": {
+      "march2023": {
+        "date": "March 31, 2023 (FY2023)",
+        "status": "Audited"
+      }
+    }
+  },
+  "segmentalResults": {
+    "segmentRevenue": {
+      "retailBanking": {
+        "june2023": 31057.21,
+        "march2023": 28739.34,
+        "june2022": 23388.01,
+        "march2023Annual": 103775.34
+      },
+      "wholesaleBanking": {
+        "june2023": 16960.13,
+        "march2023": 14296.64,
+        "june2022": 10869.29,
+        "march2023Annual": 50614.85
+      },
+      "treasury": {
+        "june2023": 26305.52,
+        "march2023": 24009.31,
+        "june2022": 18398.07,
+        "march2023Annual": 84536.92
+      },
+      "otherBanking": {
+        "june2023": 1560.65,
+        "march2023": 1379.10,
+        "june2022": 623.54,
+        "march2023Annual": 4464.00
+      },
+      "lifeInsurance": {
+        "june2023": 9957.69,
+        "march2023": 14955.07,
+        "june2022": 8997.79,
+        "march2023Annual": 47930.17
+      },
+      "others": {
+        "june2023": 3192.78,
+        "march2023": 2698.90,
+        "june2022": 2064.00,
+        "march2023Annual": 9725.98
+      },
+      "totalSegmentRevenue": {
+        "june2023": 89065.36,
+        "march2023": 86577.95,
+        "june2022": 64292.70,
+        "march2023Annual": 301047.26
+      },
+      "lessInterSegmentRevenue": {
+        "june2023": 36981.36,
+        "march2023": 32655.20,
+        "june2022": 25074.37,
+        "march2023Annual": 114868.46
+      },
+      "incomeFromOperations": {
+        "june2023": 52084.00,
+        "march2023": 53922.75,
+        "june2022": 39218.33,
+        "march2023Annual": 186178.80
+      }
+    },
+    "segmentResults": {
+      "retailBanking": {
+        "june2023": 4179.63,
+        "march2023": 4009.63,
+        "june2022": 3909.66,
+        "march2023Annual": 17533.68
+      },
+      "wholesaleBanking": {
+        "june2023": 4079.70,
+        "march2023": 4503.59,
+        "june2022": 3688.35,
+        "march2023Annual": 15785.78
+      },
+      "treasury": {
+        "june2023": 4362.53,
+        "march2023": 4234.53,
+        "june2022": 2608.92,
+        "march2023Annual": 14037.21
+      },
+      "otherBanking": {
+        "june2023": 431.66,
+        "march2023": 342.28,
+        "june2022": 204.76,
+        "march2023Annual": 1001.45
+      },
+      "lifeInsurance": {
+        "june2023": 268.48,
+        "march2023": 516.80,
+        "june2022": 155.69,
+        "march2023Annual": 896.89
+      },
+      "others": {
+        "june2023": 1344.49,
+        "march2023": 1055.53,
+        "june2022": 971.16,
+        "march2023Annual": 4202.37
+      },
+      "unallocatedExpenses": {
+        "june2023": null,
+        "march2023": 1609.00,
+        "june2022": 1050.00,
+        "march2023Annual": 6650.00
+      },
+      "totalSegmentResults": {
+        "june2023": 14605.38,
+        "march2023": 13756.26,
+        "june2022": 10398.54,
+        "march2023Annual": 47807.38
+      },
+      "lessInterSegmentAdjustment": {
+        "june2023": 290.75,
+        "march2023": 272.12,
+        "june2022": 345.78,
+        "march2023Annual": 1550.92
+      },
+      "addShareOfProfitInAssociates": {
+        "june2023": 251.04,
+        "march2023": 251.07,
+        "june2022": 211.26,
+        "march2023Annual": 998.29
+      },
+      "profitBeforeTaxAndMinorityInterest": {
+        "june2023": 14565.67,
+        "march2023": 13735.21,
+        "june2022": 10203.05,
+        "march2023Annual": 47254.75
+      }
+    },
+    "segmentAssets": {
+      "retailBanking": {
+        "june2023": 630477.85,
+        "march2023": 603959.37,
+        "june2022": 510367.43,
+        "march2023Annual": 603959.37
+      },
+      "wholesaleBanking": {
+        "june2023": 646455.06,
+        "march2023": 632874.35,
+        "june2022": 393716.21,
+        "march2023Annual": 632874.35
+      },
+      "treasury": {
+        "june2023": 536355.17,
+        "march2023": 512340.50,
+        "june2022": 489508.32,
+        "march2023Annual": 512340.50
+      },
+      "otherBanking": {
+        "june2023": 58997.13,
+        "march2023": 58696.05,
+        "june2022": 69113.82,
+        "march2023Annual": 58696.05
+      },
+      "lifeInsurance": {
+        "june2023": 270187.94,
+        "march2023": 255689.90,
+        "june2022": 233435.29,
+        "march2023Annual": 255689.90
+      },
+      "others": {
+        "june2023": 74421.79,
+        "march2023": 71334.84,
+        "june2022": 48377.85,
+        "march2023Annual": 71334.84
+      },
+      "unallocated": {
+        "june2023": 7589.80,
+        "march2023": 9656.72,
+        "june2022": 9610.65,
+        "march2023Annual": 9656.72
+      },
+      "total": {
+        "june2023": 2051484.74,
+        "march2023": 1969551.73,
+        "june2022": 1754078.80,
+        "march2023Annual": 1969551.73
+      },
+      "lessInterSegmentAdjustment": {
+        "june2023": 11587.34,
+        "march2023": 11061.23,
+        "june2022": 11301.62,
+        "march2023Annual": 11061.23
+      },
+      "totalSegmentAssets": {
+        "june2023": 2039897.40,
+        "march2023": 1958490.50,
+        "june2022": 1742777.18,
+        "march2023Annual": 1958490.50
+      }
+    },
+    "segmentLiabilities": {
+      "retailBanking": {
+        "june2023": 918274.84,
+        "march2023": 891354.54,
+        "june2022": 783592.78,
+        "march2023Annual": 891354.54
+      },
+      "wholesaleBanking": {
+        "june2023": 350353.05,
+        "march2023": 347254.42,
+        "june2022": 316847.54,
+        "march2023Annual": 347254.42
+      },
+      "treasury": {
+        "june2023": 35810.39,
+        "march2023": 144538.39,
+        "june2022": 140057.76,
+        "march2023Annual": 144538.39
+      },
+      "otherBanking": {
+        "june2023": 52119.26,
+        "march2023": 51336.80,
+        "june2022": 48899.28,
+        "march2023Annual": 51336.80
+      },
+      "lifeInsurance": {
+        "june2023": 259857.31,
+        "march2023": 245755.62,
+        "june2022": 224521.49,
+        "march2023Annual": 245755.62
+      },
+      "others": {
+        "june2023": 64556.12,
+        "march2023": 62250.16,
+        "june2022": 44502.77,
+        "march2023Annual": 62250.16
+      },
+      "unallocated": {
+        "june2023": 13100.00,
+        "march2023": 13100.00,
+        "june2022": 8500.00,
+        "march2023Annual": 13100.00
+      },
+      "total": {
+        "june2023": 1825420.17,
+        "march2023": 1755453.93,
+        "june2022": 1564380.00,
+        "march2023Annual": 1755453.93
+      },
+      "lessInterSegmentAdjustment": {
+        "june2023": 11597.34,
+        "march2023": 11461.23,
+        "june2022": 11301.62,
+        "march2023Annual": 11461.23
+      },
+      "totalSegmentLiabilities": {
+        "june2023": 1813831.83,
+        "march2023": 1743992.70,
+        "june2022": 1553078.38,
+        "march2023Annual": 1743992.70
+      }
+    },
+    "capitalEmployed": {
+      "total": {
+        "june2023": 226065.57,
+        "march2023": 214497.80,
+        "june2022": 189698.80,
+        "march2023Annual": 214497.80
+      }
+    },
+    "totalAssets": {
+      "total": {
+        "june2023": 2039897.40,
+        "march2023": 1958490.50,
+        "june2022": 1742777.18,
+        "march2023Annual": 1958490.50
+      }
+    }
+  }
+}

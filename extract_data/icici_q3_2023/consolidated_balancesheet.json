@@ -1,0 +1,131 @@
+{
+  "company": "ICICI Bank Limited",
+  "reportType": "SUMMARISED CONSOLIDATED BALANCE SHEET",
+  "currency": "₹ in crore",
+  "periods": {
+    "december2023": {
+      "date": "December 31, 2023",
+      "status": "Unaudited"
+    },
+    "september2023": {
+      "date": "September 30, 2023",
+      "status": "Unaudited"
+    },
+    "march2023": {
+      "date": "March 31, 2023",
+      "status": "Audited"
+    },
+    "december2022": {
+      "date": "December 31, 2022",
+      "status": "Unaudited"
+    }
+  },
+  "consolidatedBalanceSheet": {
+    "capitalAndLiabilities": {
+      "capital": {
+        "december2023": 1403.18,
+        "september2023": 1400.83,
+        "march2023": 1396.78,
+        "december2022": 1395.62
+      },
+      "employeesStockOptionsOutstanding": {
+        "december2023": 1242.55,
+        "september2023": 1078.01,
+        "march2023": 760.89,
+        "december2022": 636.11
+      },
+      "reservesAndSurplus": {
+        "december2023": 241184.50,
+        "september2023": 229405.37,
+        "march2023": 212340.13,
+        "december2022": 202561.15
+      },
+      "minorityInterest": {
+        "december2023": 7431.64,
+        "september2023": 7203.63,
+        "march2023": 6686.75,
+        "december2022": 6573.21
+      },
+      "deposits": {
+        "december2023": 1366842.09,
+        "september2023": 1325252.62,
+        "march2023": 1210832.15,
+        "december2022": 1152325.13
+      },
+      "borrowings": {
+        "december2023": 200966.94,
+        "september2023": 189709.79,
+        "march2023": 189061.81,
+        "december2022": 192496.93
+      },
+      "liabilitiesOnPoliciesInForce": {
+        "december2023": 273564.60,
+        "september2023": 259349.87,
+        "march2023": 238867.36,
+        "december2022": 239975.30
+      },
+      "otherLiabilitiesAndProvisions": {
+        "december2023": 115382.83,
+        "september2023": 111449.63,
+        "march2023": 98544.63,
+        "december2022": 91245.56
+      },
+      "totalCapitalAndLiabilities": {
+        "december2023": 2208018.43,
+        "september2023": 2124849.75,
+        "march2023": 1958490.50,
+        "december2022": 1887209.01
+      }
+    },
+    "assets": {
+      "cashAndBalancesWithRBI": {
+        "december2023": 64935.13,
+        "september2023": 66269.76,
+        "march2023": 68648.94,
+        "december2022": 62323.30
+      },
+      "balancesWithBanksAndMoneyAtCall": {
+        "december2023": 56514.16,
+        "september2023": 62832.19,
+        "march2023": 67807.55,
+        "december2022": 77556.73
+      },
+      "investments": {
+        "december2023": 754864.94,
+        "september2023": 715263.84,
+        "march2023": 639551.97,
+        "december2022": 612557.65
+      },
+      "advances": {
+        "december2023": 1220148.02,
+        "september2023": 1182108.54,
+        "march2023": 1083866.32,
+        "december2022": 1038091.18
+      },
+      "fixedAssets": {
+        "december2023": 11913.77,
+        "september2023": 11657.62,
+        "march2023": 10969.00,
+        "december2022": 10858.87
+      },
+      "otherAssets": {
+        "december2023": 99541.08,
+        "september2023": 86616.47,
+        "march2023": 87545.39,
+        "december2022": 85719.95
+      },
+      "goodwillOnConsolidation": {
+        "december2023": 101.33,
+        "september2023": 101.33,
+        "march2023": 101.33,
+        "december2022": 101.33
+      },
+      "totalAssets": {
+        "december2023": 2208018.43,
+        "september2023": 2124849.75,
+        "march2023": 1958490.50,
+        "december2022": 1887209.01
+      }
+    }
+  }
+}

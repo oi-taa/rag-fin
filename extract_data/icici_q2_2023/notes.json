@@ -1,0 +1,251 @@
+{
+  "company": "ICICI Bank Limited",
+  "reportType": "STANDALONE AND CONSOLIDATED FINANCIAL RESULTS",
+  "currency": "₹ in crore",
+  "reportDate": "October 21, 2023",
+  "quarter": "Q2-2024",
+  "period": "September 30, 2023",
+  "notes": {
+    "generalNotes": [
+      {
+        "noteNumber": 1,
+        "description": "The financial results have been prepared in accordance with the recognition and measurement principles given in Accounting Standard (AS) 25 on 'Interim Financial Reporting' as prescribed under the Companies Act, 2013."
+      },
+      {
+        "noteNumber": 2,
+        "description": "The above standalone and consolidated financial results have been approved by the Board of Directors at its meeting held on October 21, 2023. The joint statutory auditors have conducted limited review and issued an unmodified report on the standalone and consolidated financial results for Q2-2024 and H1-2024."
+      },
+      {
+        "noteNumber": 3,
+        "description": "During Q2-2024, the Bank has allotted 6,437,365 equity shares of ₹ 2 each pursuant to exercise of employee stock options."
+      },
+      {
+        "noteNumber": 4,
+        "description": "At September 30, 2023, the Bank holds contingency provision of ₹ 13,100.00 crore (June 30, 2023 and March 31, 2023: ₹ 13,100.00 crore; September 30, 2022: ₹ 10,000.00 crore)."
+      },
+      {
+        "noteNumber": 5,
+        "description": "₹ 1.00 crore = ₹ 10.0 million."
+      },
+      {
+        "noteNumber": 6,
+        "description": "The above standalone and consolidated financial results have been reviewed/audited by the joint statutory auditors, M S K A & Associates, Chartered Accountants and KKC & Associates LLP, Chartered Accountants."
+      },
+      {
+        "noteNumber": 7,
+        "description": "Previous period/year figures have been re-grouped/re-classified where necessary to conform to current period classification."
+      },
+      {
+        "noteNumber": 8,
+        "description": "In accordance with RBI guidelines, consolidated Pillar 3 disclosure (unaudited), leverage ratio, liquidity coverage ratio, net stable funding ratio and details of loans transferred/acquired under the RBI Master Direction on Transfer of Loan Exposures dated September 24, 2021 is available at https://www.icicibank.com/regulatory-disclosure.page."
+      }
+    ],
+    "standaloneFinancialResultsNotes": {
+      "npaRatios": {
+        "note": "At September 30, 2023, the percentage of gross non-performing advances (net of write-off) to gross advances was 2.55% (June 30, 2023: 2.83%, March 31, 2023: 2.87%, September 30, 2022: 3.26%) and net non-performing advances to net advances was 0.45% (June 30, 2023: 0.51%, March 31, 2023: 0.51%, September 30, 2022: 0.65%)."
+      },
+      "netWorthCalculation": {
+        "note": "Net worth is computed as per RBI Master Circular No. RBI/2015-16/70 DBR.No.Dir.BC.12/13.03.00/2015-16 on Exposure Norms dated July 1, 2015."
+      },
+      "debtDefinition": {
+        "note": "Debt represents borrowings with residual maturity of more than one year."
+      },
+      "totalDebtsDefinition": {
+        "note": "Total debts represents total borrowings of the Bank."
+      }
+    },
+    "cashFlowNotes": {
+      "cashAndCashEquivalentsDefinition": {
+        "note": "Cash and cash equivalents include cash in hand, balances with RBI, balances with other banks and money at call and short notice."
+      }
+    },
+    "segmentalResultsNotes": {
+      "standaloneSegmentalNotes": [
+        {
+          "noteNumber": 1,
+          "description": "The disclosure on segmental reporting has been prepared in accordance with Securities and Exchange Board of India (SEBI) circular no. CIR/CFD/FAC/62/2016 dated July 5, 2016 on Revised Formats for Financial Results and Implementation of Ind-AS by Listed Entities."
+        },
+        {
+          "noteNumber": 2,
+          "description": "'Retail Banking' includes exposures of the Bank which satisfy the four criteria of orientation, product, granularity and low value of individual exposures for retail exposures laid down in Basel Committee on Banking Supervision document 'International Convergence of Capital Measurement and Capital Standards: A Revised Framework'. This segment also includes income from credit cards, debit cards, third party product distribution and the associated costs."
+        },
+        {
+          "noteNumber": 3,
+          "description": "'Wholesale Banking' includes all advances to trusts, partnership firms, companies and statutory bodies, by the Bank which are not included under Retail Banking."
+        },
+        {
+          "noteNumber": 4,
+          "description": "'Treasury' primarily includes the entire investment and derivative portfolio of the Bank."
+        },
+        {
+          "noteNumber": 5,
+          "description": "'Other Banking' includes leasing operations and other items not attributable to any particular business segment of the Bank."
+        },
+        {
+          "noteNumber": 6,
+          "description": "'Unallocated' includes items such as tax paid in advance net of provision, deferred tax and provisions to the extent reckoned at the entity level."
+        }
+      ],
+      "retailBankingSubdivision": {
+        "note": "RBI's Master Direction on Financial Statements – Presentation and Disclosures, requires to sub-divide 'Retail banking' into (a) Digital Banking (as defined in RBI circular on Establishment of Digital Banking Units dated April 7, 2022) and (b) Other Retail Banking segment.",
+        "subdivisionData": {
+          "Q2_2024": {
+            "retailBanking": {
+              "segmentRevenue": 33080.02,
+              "segmentResults": 4895.97,
+              "segmentAssets": 668057.40,
+              "segmentLiabilities": 940334.15
+            },
+            "digitalBanking": {
+              "segmentRevenue": 7644.09,
+              "segmentResults": 1162.52,
+              "segmentAssets": 99513.41,
+              "segmentLiabilities": 161717.18
+            },
+            "otherRetailBanking": {
+              "segmentRevenue": 25435.93,
+              "segmentResults": 3733.45,
+              "segmentAssets": 568543.99,
+              "segmentLiabilities": 778616.97
+            }
+          },
+          "Q1_2024": {
+            "retailBanking": {
+              "segmentRevenue": 31057.21,
+              "segmentResults": 4178.63,
+              "segmentAssets": 630477.85,
+              "segmentLiabilities": 918274.84
+            },
+            "digitalBanking": {
+              "segmentRevenue": 7069.30,
+              "segmentResults": 1175.94,
+              "segmentAssets": 99428.98,
+              "segmentLiabilities": 148151.01
+            },
+            "otherRetailBanking": {
+              "segmentRevenue": 23987.91,
+              "segmentResults": 3002.69,
+              "segmentAssets": 531048.87,
+              "segmentLiabilities": 770123.83
+            }
+          }
+        }
+      },
+      "consolidatedSegmentalNotes": [
+        {
+          "noteNumber": 1,
+          "description": "The disclosure on segmental reporting has been prepared in accordance with Securities and Exchange Board of India (SEBI) circular no. CIR/CFD/FAC/62/2016 dated July 5, 2016 on Revised Formats for Financial Results and Implementation of Ind AS by Listed Entities."
+        },
+        {
+          "noteNumber": 2,
+          "description": "'Retail Banking' includes exposures of the Bank which satisfy the four criteria of orientation, product, granularity and low value of individual exposures for retail exposures laid down in Basel Committee on Banking Supervision document 'International Convergence of Capital Measurement and Capital Standards: A Revised Framework'. This segment also includes income from credit cards, debit cards, third party product distribution and the associated costs."
+        },
+        {
+          "noteNumber": 3,
+          "description": "'Wholesale Banking' includes all advances to trusts, partnership firms, companies and statutory bodies, by the Bank which are not included under Retail Banking."
+        },
+        {
+          "noteNumber": 4,
+          "description": "'Treasury' primarily includes the entire investment and derivative portfolio of the Bank."
+        },
+        {
+          "noteNumber": 5,
+          "description": "'Other Banking' includes leasing operations and other items not attributable to any particular business segment of the Bank. Further, it includes the Bank's banking subsidiaries i.e. ICICI Bank UK PLC and ICICI Bank Canada."
+        },
+        {
+          "noteNumber": 6,
+          "description": "'Life Insurance' represents ICICI Prudential Life Insurance Company Limited."
+        },
+        {
+          "noteNumber": 7,
+          "description": "'Others' comprises the consolidated entities of the Bank, not covered in any of the segments above."
+        },
+        {
+          "noteNumber": 8,
+          "description": "'Unallocated' includes items such as tax paid in advance net of provision, deferred tax and provisions to the extent reckoned at the entity level."
+        }
+      ]
+    },
+    "covid19ResolutionFramework": {
+      "description": "Details of resolution plans implemented under the Resolution Framework for Covid-19 related stress as per RBI circular dated August 6, 2020 (Resolution Framework 1.0) and May 5, 2021 (Resolution Framework 2.0) at September 30, 2023",
+      "data": {
+        "exposureAsAtMarch31_2023": {
+          "corporatePersons": {
+            "total": 1960.78,
+            "ofWhichMSMEs": 810.90
+          },
+          "personalLoans": 568.76,
+          "others": 431.30,
+          "total": 2795.93
+        },
+        "exposureAsAtSeptember30_2023": {
+          "total": 1567.05
+        },
+        "duringH1_2024": {
+          "aggregateDebtSlippedIntoNPA": {
+            "corporatePersons": 111.98,
+            "ofWhichMSMEs": null,
+            "personalLoans": null,
+            "others": 42.20,
+            "total": 154.18
+          },
+          "amountWrittenOff": {
+            "corporatePersons": 4.98,
+            "ofWhichMSMEs": null,
+            "personalLoans": null,
+            "others": 2.59,
+            "total": 7.57
+          },
+          "amountPaidByBorrowers": {
+            "corporatePersons": 281.75,
+            "ofWhichMSMEs": 13.32,
+            "personalLoans": null,
+            "others": 95.26,
+            "total": 390.33
+          }
+        }
+      },
+      "footnotes": [
+        {
+          "number": 1,
+          "description": "Includes cases which have been written off during the period."
+        },
+        {
+          "number": 2,
+          "description": "Net of increase in exposure during the period."
+        },
+        {
+          "number": 3,
+          "description": "Includes various categories of retail loans."
+        }
+      ]
+    }
+  },
+  "boardApproval": {
+    "approvedBy": "Board of Directors",
+    "meetingDate": "October 21, 2023",
+    "signedBy": {
+      "name": "Sandeep Batra",
+      "designation": "Executive Director",
+      "din": "03620913",
+      "location": "Mumbai",
+      "date": "October 21, 2023"
+    }
+  },
+  "auditors": {
+    "jointStatutoryAuditors": [
+      "M S K A & Associates, Chartered Accountants",
+      "KKC & Associates LLP, Chartered Accountants"
+    ],
+    "reviewStatus": "Limited review conducted and unmodified report issued for Q2-2024 and H1-2024"
+  },
+  "companyDetails": {
+    "cin": "L65190GJ1994PLC021012",
+    "registeredOffice": "ICICI Bank Tower, Near Chakli Circle, Old Padra Road, Vadodara - 390 007",
+    "corporateOffice": "ICICI Bank Towers, Bandra-Kurla Complex, Bandra (East), Mumbai - 400 051",
+    "phone": "022-26538900",
+    "fax": "022-26531228",
+    "email": "companysecretary@icicibank.com",
+    "website": "www.icicibank.com"
+  }
+}

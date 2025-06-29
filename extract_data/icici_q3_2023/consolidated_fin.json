@@ -1,0 +1,267 @@
+{
+  "company": "ICICI Bank Limited",
+  "reportType": "CONSOLIDATED FINANCIAL RESULTS",
+  "currency": "₹ in crore",
+  "periods": {
+    "threeMonthsEnded": {
+      "december2023": {
+        "date": "December 31, 2023 (Q3-2024)",
+        "status": "Unaudited"
+      },
+      "september2023": {
+        "date": "September 30, 2023 (Q2-2024)",
+        "status": "Unaudited"
+      },
+      "december2022": {
+        "date": "December 31, 2022 (Q3-2023)",
+        "status": "Unaudited"
+      }
+    },
+    "nineMonthsEnded": {
+      "december2023": {
+        "date": "December 31, 2023 (9M-2024)",
+        "status": "Unaudited"
+      },
+      "december2022": {
+        "date": "December 31, 2022 (9M-2023)",
+        "status": "Unaudited"
+      }
+    },
+    "yearEnded": {
+      "march2023": {
+        "date": "March 31, 2023 (FY2023)",
+        "status": "Audited"
+      }
+    }
+  },
+  "consolidatedResults": {
+    "income": {
+      "interestEarned": {
+        "december2023": 40865.23,
+        "september2023": 38938.08,
+        "december2022": 31618.81,
+        "december20239M": 116909.20,
+        "december20229M": 86627.90,
+        "march2023Annual": 121066.81
+      },
+      "interestDiscountOnAdvancesBills": {
+        "december2023": 30030.69,
+        "september2023": 28501.06,
+        "december2022": 23259.39,
+        "december20239M": 85619.44,
+        "december20229M": 62575.56,
+        "march2023Annual": 87929.24
+      },
+      "incomeOnInvestments": {
+        "december2023": 9523.04,
+        "september2023": 9279.96,
+        "december2022": 7136.29,
+        "december20239M": 27614.00,
+        "december20229M": 20077.16,
+        "march2023Annual": 27905.03
+      },
+      "interestOnBalancesWithRBI": {
+        "december2023": 680.96,
+        "september2023": 699.56,
+        "december2022": 595.39,
+        "december20239M": 1962.63,
+        "december20229M": 1598.32,
+        "march2023Annual": 2305.46
+      },
+      "others": {
+        "december2023": 630.64,
+        "september2023": 457.50,
+        "december2022": 627.14,
+        "december20239M": 1693.08,
+        "december20229M": 2376.86,
+        "march2023Annual": 2927.08
+      },
+      "otherIncome": {
+        "december2023": 18614.53,
+        "september2023": 18354.18,
+        "december2022": 16240.69,
+        "december20239M": 51946.82,
+        "december20229M": 46038.15,
+        "march2023Annual": 65111.99
+      },
+      "totalIncome": {
+        "december2023": 59479.76,
+        "september2023": 57292.26,
+        "december2022": 47859.50,
+        "december20239M": 168856.02,
+        "december20229M": 132666.05,
+        "march2023Annual": 186178.80
+      }
+    },
+    "expenses": {
+      "interestExpended": {
+        "december2023": 19408.76,
+        "september2023": 17908.01,
+        "december2022": 12977.89,
+        "december20239M": 53684.43,
+        "december20229M": 36063.92,
+        "march2023Annual": 50543.39
+      },
+      "operatingExpenses": {
+        "december2023": 23908.69,
+        "september2023": 23911.01,
+        "december2022": 20511.90,
+        "december20239M": 67876.37,
+        "december20229M": 58201.93,
+        "march2023Annual": 82439.02
+      },
+      "employeeCost": {
+        "december2023": 4749.19,
+        "september2023": 4662.23,
+        "december2022": 3723.10,
+        "december20239M": 14222.75,
+        "december20229M": 10986.17,
+        "march2023Annual": 15234.17
+      },
+      "otherOperatingExpenses": {
+        "december2023": 19159.50,
+        "september2023": 19248.78,
+        "december2022": 16788.80,
+        "december20239M": 53653.62,
+        "december20229M": 47215.76,
+        "march2023Annual": 67204.85
+      },
+      "totalExpenditure": {
+        "december2023": 43317.45,
+        "september2023": 41819.02,
+        "december2022": 33489.79,
+        "december20239M": 121560.80,
+        "december20229M": 94265.85,
+        "march2023Annual": 132982.41
+      }
+    },
+    "profitAndLoss": {
+      "operatingProfit": {
+        "december2023": 16162.31,
+        "september2023": 15473.24,
+        "december2022": 14369.71,
+        "december20239M": 47295.22,
+        "december20229M": 37990.20,
+        "march2023Annual": 53196.39
+      },
+      "provisions": {
+        "december2023": 1020.45,
+        "september2023": 649.01,
+        "december2022": 2434.12,
+        "december20239M": 3014.50,
+        "december20229M": 5217.88,
+        "march2023Annual": 6939.93
+      },
+      "profitFromOrdinaryActivitiesBeforeTax": {
+        "december2023": 15141.86,
+        "september2023": 14824.23,
+        "december2022": 11935.59,
+        "december20239M": 44280.72,
+        "december20229M": 32772.32,
+        "march2023Annual": 46256.46
+      },
+      "addShareOfProfitInAssociates": {
+        "december2023": 259.96,
+        "september2023": 335.45,
+        "december2022": 229.44,
+        "december20239M": 846.45,
+        "december20229M": 747.22,
+        "march2023Annual": 998.29
+      },
+      "profitFromOrdinaryActivitiesBeforeTaxAndMinorityInterest": {
+        "december2023": 15401.82,
+        "september2023": 15159.68,
+        "december2022": 12165.03,
+        "december20239M": 45127.17,
+        "december20229M": 33519.54,
+        "march2023Annual": 47254.75
+      },
+      "taxExpenses": {
+        "december2023": 3886.67,
+        "september2023": 3808.82,
+        "december2022": 2999.41,
+        "december20239M": 11246.71,
+        "december20229M": 8284.52,
+        "march2023Annual": 11793.44
+      },
+      "currentTax": {
+        "december2023": 3810.46,
+        "september2023": 3638.50,
+        "december2022": 2905.98,
+        "december20239M": 10956.53,
+        "december20229M": 8278.38,
+        "march2023Annual": 11456.44
+      },
+      "deferredTax": {
+        "december2023": 76.21,
+        "september2023": 170.32,
+        "december2022": 93.43,
+        "december20239M": 290.18,
+        "december20229M": 16.14,
+        "march2023Annual": 337.00
+      },
+      "shareOfProfitLossOfMinorityShareholders": {
+        "december2023": 462.55,
+        "september2023": 454.73,
+        "december2022": 373.20,
+        "december20239M": 1295.61,
+        "december20229M": 1041.08,
+        "march2023Annual": 1424.67
+      },
+      "netProfitFromOrdinaryActivitiesAfterTax": {
+        "december2023": 11052.60,
+        "september2023": 10896.13,
+        "december2022": 8792.42,
+        "december20239M": 32584.85,
+        "december20229M": 24183.94,
+        "march2023Annual": 34036.64
+      },
+      "netProfitForThePeriod": {
+        "december2023": 11052.60,
+        "september2023": 10896.13,
+        "december2022": 8792.42,
+        "december20239M": 32584.85,
+        "december20229M": 24183.94,
+        "march2023Annual": 34036.64
+      }
+    },
+    "balanceSheetItems": {
+      "paidUpEquityShareCapital": {
+        "december2023": 1403.18,
+        "september2023": 1400.83,
+        "december2022": 1395.62,
+        "december20239M": 1403.18,
+        "december20229M": 1395.62,
+        "march2023Annual": 1396.78
+      },
+      "reservesExcludingRevaluationReserves": {
+        "december2023": 238096.82,
+        "september2023": 226314.47,
+        "december2022": 199333.21,
+        "december20239M": 238096.82,
+        "december20229M": 199333.21,
+        "march2023Annual": 209248.29
+      }
+    },
+    "ratios": {
+      "earningsPerShare": {
+        "basic": {
+          "december2023": 15.77,
+          "september2023": 15.57,
+          "december2022": 12.61,
+          "december20239M": 46.55,
+          "december20229M": 34.74,
+          "march2023Annual": 48.86
+        },
+        "diluted": {
+          "december2023": 15.47,
+          "september2023": 15.27,
+          "december2022": 12.35,
+          "december20239M": 45.65,
+          "december20229M": 34.01,
+          "march2023Annual": 47.84
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,379 @@
+{
+  "company": "ICICI Bank Limited",
+  "reportType": "CONSOLIDATED SEGMENTAL RESULTS",
+  "currency": "₹ in crore",
+  "periods": {
+    "threeMonthsEnded": {
+      "september2023": {
+        "date": "September 30, 2023 (Q2-2024)",
+        "status": "Unaudited"
+      },
+      "june2023": {
+        "date": "June 30, 2023 (Q1-2024)",
+        "status": "Unaudited"
+      },
+      "september2022": {
+        "date": "September 30, 2022 (Q2-2023)",
+        "status": "Unaudited"
+      }
+    },
+    "sixMonthsEnded": {
+      "september2023": {
+        "date": "September 30, 2023 (H1-2024)",
+        "status": "Unaudited"
+      },
+      "september2022": {
+        "date": "September 30, 2022 (H1-2023)",
+        "status": "Unaudited"
+      }
+    },
+    "yearEnded": {
+      "march2023": {
+        "date": "March 31, 2023 (FY2023)",
+        "status": "Audited"
+      }
+    }
+  },
+  "consolidatedSegmentalResults": {
+    "segmentRevenue": {
+      "retailBanking": {
+        "september2023": 33080.02,
+        "june2023": 31057.21,
+        "september2022": 25322.22,
+        "september2023H1": 64137.23,
+        "september2022H1": 48710.23,
+        "march2023Annual": 103775.34
+      },
+      "wholesaleBanking": {
+        "september2023": 17383.77,
+        "june2023": 16069.13,
+        "september2022": 11555.28,
+        "september2023H1": 33452.90,
+        "september2022H1": 22424.57,
+        "march2023Annual": 50614.85
+      },
+      "treasury": {
+        "september2023": 27718.83,
+        "june2023": 26305.52,
+        "september2022": 20022.25,
+        "september2023H1": 54024.35,
+        "september2022H1": 38380.32,
+        "march2023Annual": 84536.92
+      },
+      "otherBanking": {
+        "september2023": 1497.57,
+        "june2023": 1566.63,
+        "september2022": 1186.06,
+        "september2023H1": 3064.20,
+        "september2022H1": 1811.60,
+        "march2023Annual": 4464.00
+      },
+      "lifeInsurance": {
+        "september2023": 13413.14,
+        "june2023": 9937.69,
+        "september2022": 12054.15,
+        "september2023H1": 23350.83,
+        "september2022H1": 21051.94,
+        "march2023Annual": 47930.17
+      },
+      "others": {
+        "september2023": 3287.17,
+        "june2023": 3129.78,
+        "september2022": 2446.68,
+        "september2023H1": 6416.95,
+        "september2022H1": 4500.68,
+        "march2023Annual": 9725.98
+      },
+      "totalSegmentRevenue": {
+        "september2023": 96380.50,
+        "june2023": 88065.96,
+        "september2022": 72586.64,
+        "september2023H1": 184446.46,
+        "september2022H1": 136879.34,
+        "march2023Annual": 301047.26
+      },
+      "lessInterSegmentRevenue": {
+        "september2023": 39088.24,
+        "june2023": 35981.96,
+        "september2022": 27408.42,
+        "september2023H1": 75070.20,
+        "september2022H1": 52482.79,
+        "march2023Annual": 114868.46
+      },
+      "incomeFromOperations": {
+        "september2023": 57292.26,
+        "june2023": 52084.00,
+        "september2022": 45178.22,
+        "september2023H1": 109376.26,
+        "september2022H1": 84396.55,
+        "march2023Annual": 186178.80
+      }
+    },
+    "segmentResults": {
+      "retailBanking": {
+        "september2023": 4895.97,
+        "june2023": 4178.63,
+        "september2022": 4532.82,
+        "september2023H1": 9074.60,
+        "september2022H1": 8342.48,
+        "march2023Annual": 17533.68
+      },
+      "wholesaleBanking": {
+        "september2023": 4670.00,
+        "june2023": 4079.70,
+        "september2022": 3717.12,
+        "september2023H1": 8749.70,
+        "september2022H1": 7405.50,
+        "march2023Annual": 15785.78
+      },
+      "treasury": {
+        "september2023": 3826.64,
+        "june2023": 4362.51,
+        "september2022": 3041.78,
+        "september2023H1": 8189.15,
+        "september2022H1": 5650.70,
+        "march2023Annual": 14037.21
+      },
+      "otherBanking": {
+        "september2023": 323.65,
+        "june2023": 431.66,
+        "september2022": 235.00,
+        "september2023H1": 755.31,
+        "september2022H1": 439.76,
+        "march2023Annual": 1001.45
+      },
+      "lifeInsurance": {
+        "september2023": 248.31,
+        "june2023": 208.48,
+        "september2022": 199.48,
+        "september2023H1": 456.79,
+        "september2022H1": 355.17,
+        "march2023Annual": 896.89
+      },
+      "others": {
+        "september2023": 1367.63,
+        "june2023": 1344.40,
+        "september2022": 1139.43,
+        "september2023H1": 2712.03,
+        "september2022H1": 2060.59,
+        "march2023Annual": 4202.37
+      },
+      "unallocatedExpenses": {
+        "september2023": null,
+        "june2023": null,
+        "september2022": -1500.00,
+        "september2023H1": null,
+        "september2022H1": -2550.00,
+        "march2023Annual": -5650.00
+      },
+      "totalSegmentResults": {
+        "september2023": 15332.20,
+        "june2023": 14605.38,
+        "september2022": 11365.63,
+        "september2023H1": 29937.58,
+        "september2022H1": 21704.20,
+        "march2023Annual": 47807.38
+      },
+      "addShareOfProfitInAssociates": {
+        "september2023": 335.45,
+        "june2023": 251.04,
+        "september2022": 306.52,
+        "september2023H1": 586.49,
+        "september2022H1": 517.78,
+        "march2023Annual": 998.29
+      },
+      "profitBeforeTaxAndMinorityInterest": {
+        "september2023": 15159.68,
+        "june2023": 14565.67,
+        "september2022": 11151.46,
+        "september2023H1": 29725.35,
+        "september2022H1": 21354.51,
+        "march2023Annual": 47254.75
+      }
+    },
+    "segmentAssets": {
+      "retailBanking": {
+        "september2023": 668057.40,
+        "june2023": 630477.85,
+        "september2022": 547304.40,
+        "september2023H1": 668057.40,
+        "september2022H1": 547304.40,
+        "march2023Annual": 603959.37
+      },
+      "wholesaleBanking": {
+        "september2023": 463638.43,
+        "june2023": 446455.06,
+        "september2022": 391612.01,
+        "september2023H1": 463638.43,
+        "september2022H1": 391612.01,
+        "march2023Annual": 432874.35
+      },
+      "treasury": {
+        "september2023": 556107.71,
+        "june2023": 536365.17,
+        "september2022": 516823.60,
+        "september2023H1": 556107.71,
+        "september2022H1": 516823.60,
+        "march2023Annual": 512940.50
+      },
+      "otherBanking": {
+        "september2023": 85485.62,
+        "june2023": 85997.13,
+        "september2022": 77931.47,
+        "september2023H1": 85485.62,
+        "september2022H1": 77931.47,
+        "march2023Annual": 83696.05
+      },
+      "lifeInsurance": {
+        "september2023": 276072.97,
+        "june2023": 270187.94,
+        "september2022": 247827.69,
+        "september2023H1": 276072.97,
+        "september2022H1": 247827.69,
+        "march2023Annual": 255689.90
+      },
+      "others": {
+        "september2023": 79509.73,
+        "june2023": 74421.79,
+        "september2022": 52124.46,
+        "september2023H1": 79509.73,
+        "september2022H1": 52124.46,
+        "march2023Annual": 71134.84
+      },
+      "unallocated": {
+        "september2023": 7409.61,
+        "june2023": 7589.80,
+        "september2022": 10294.09,
+        "september2023H1": 7409.61,
+        "september2022H1": 10294.09,
+        "march2023Annual": 9656.72
+      },
+      "totalSegmentAssets": {
+        "september2023": 2136281.47,
+        "june2023": 2051494.74,
+        "september2022": 1843917.72,
+        "september2023H1": 2136281.47,
+        "september2022H1": 1843917.72,
+        "march2023Annual": 1969951.73
+      },
+      "lessInterSegmentAdjustment": {
+        "september2023": 11431.72,
+        "june2023": 11597.34,
+        "september2022": 10763.90,
+        "september2023H1": 11431.72,
+        "september2022H1": 10763.90,
+        "march2023Annual": 11461.23
+      },
+      "totalAssets": {
+        "september2023": 2124849.75,
+        "june2023": 2039897.40,
+        "september2022": 1833153.82,
+        "september2023H1": 2124849.75,
+        "september2022H1": 1833153.82,
+        "march2023Annual": 1958490.50
+      }
+    },
+    "segmentLiabilities": {
+      "retailBanking": {
+        "september2023": 940334.15,
+        "june2023": 918274.84,
+        "september2022": 830053.25,
+        "september2023H1": 940334.15,
+        "september2022H1": 830053.25,
+        "march2023Annual": 891354.54
+      },
+      "wholesaleBanking": {
+        "september2023": 416050.16,
+        "june2023": 380883.03,
+        "september2022": 321677.03,
+        "september2023H1": 416050.16,
+        "september2022H1": 321677.03,
+        "march2023Annual": 347276.49
+      },
+      "treasury": {
+        "september2023": 145118.41,
+        "june2023": 136353.59,
+        "september2022": 156709.28,
+        "september2023H1": 145118.41,
+        "september2022H1": 156709.28,
+        "march2023Annual": 144338.32
+      },
+      "otherBanking": {
+        "september2023": 54431.14,
+        "june2023": 52110.28,
+        "september2022": 48111.03,
+        "september2023H1": 54431.14,
+        "september2022H1": 48111.03,
+        "march2023Annual": 51378.80
+      },
+      "lifeInsurance": {
+        "september2023": 265576.06,
+        "june2023": 259852.31,
+        "september2022": 238362.01,
+        "september2023H1": 265576.06,
+        "september2022H1": 238362.01,
+        "march2023Annual": 245755.62
+      },
+      "others": {
+        "september2023": 69541.69,
+        "june2023": 64855.12,
+        "september2022": 43866.06,
+        "september2023H1": 69541.69,
+        "september2022H1": 43866.06,
+        "march2023Annual": 62250.16
+      },
+      "unallocated": {
+        "september2023": 13345.66,
+        "june2023": 13100.00,
+        "september2022": 10000.00,
+        "september2023H1": 13345.66,
+        "september2022H1": 10000.00,
+        "march2023Annual": 13100.00
+      },
+      "totalSegmentLiabilities": {
+        "september2023": 1904397.27,
+        "june2023": 1825429.17,
+        "september2022": 1648778.66,
+        "september2023H1": 1904397.27,
+        "september2022H1": 1648778.66,
+        "march2023Annual": 1755453.93
+      },
+      "lessInterSegmentAdjustment": {
+        "september2023": 11431.72,
+        "june2023": 11597.34,
+        "september2022": 10763.90,
+        "september2023H1": 11431.72,
+        "september2022H1": 10763.90,
+        "march2023Annual": 11461.23
+      },
+      "totalLiabilities": {
+        "september2023": 1892965.55,
+        "june2023": 1813831.83,
+        "september2022": 1638014.76,
+        "september2023H1": 1892965.55,
+        "september2022H1": 1638014.76,
+        "march2023Annual": 1743992.70
+      }
+    },
+    "capitalEmployed": {
+      "total": {
+        "september2023": 231884.20,
+        "june2023": 226065.57,
+        "september2022": 195139.06,
+        "september2023H1": 231884.20,
+        "september2022H1": 195139.06,
+        "march2023Annual": 214497.80
+      }
+    },
+    "totalAssets": {
+      "total": {
+        "september2023": 2124849.75,
+        "june2023": 2039897.40,
+        "september2022": 1833153.82,
+        "september2023H1": 2124849.75,
+        "september2022H1": 1833153.82,
+        "march2023Annual": 1958490.50
+      }
+    }
+  }
+}

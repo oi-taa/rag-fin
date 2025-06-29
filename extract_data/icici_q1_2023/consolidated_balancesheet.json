@@ -1,0 +1,110 @@
+{
+  "company": "ICICI Bank Limited",
+  "reportType": "SUMMARISED CONSOLIDATED BALANCE SHEET",
+  "currency": "₹ in crore",
+  "periods": {
+    "june2023": {
+      "date": "June 30, 2023",
+      "status": "Unaudited"
+    },
+    "march2023": {
+      "date": "March 31, 2023",
+      "status": "Audited"
+    },
+    "june2022": {
+      "date": "June 30, 2022",
+      "status": "Unaudited"
+    }
+  },
+  "consolidatedBalanceSheet": {
+    "capitalAndLiabilities": {
+      "capital": {
+        "june2023": 1399.54,
+        "march2023": 1396.78,
+        "june2022": 1391.48
+      },
+      "employeesStockOptionsOutstanding": {
+        "june2023": 916.04,
+        "march2023": 760.89,
+        "june2022": 387.33
+      },
+      "reservesAndSurplus": {
+        "june2023": 223749.98,
+        "march2023": 212340.13,
+        "june2022": 187919.99
+      },
+      "minorityInterest": {
+        "june2023": 6997.14,
+        "march2023": 6696.75,
+        "june2022": 6018.39
+      },
+      "deposits": {
+        "june2023": 1269343.44,
+        "march2023": 1210832.15,
+        "june2022": 1077789.55
+      },
+      "borrowings": {
+        "june2023": 182981.41,
+        "march2023": 189061.81,
+        "june2022": 166064.37
+      },
+      "liabilitiesOnPoliciesInForce": {
+        "june2023": 253673.57,
+        "march2023": 238867.36,
+        "june2022": 218825.18
+      },
+      "otherLiabilitiesAndProvisions": {
+        "june2023": 100936.28,
+        "march2023": 98544.63,
+        "june2022": 84380.89
+      },
+      "totalCapitalAndLiabilities": {
+        "june2023": 2039897.40,
+        "march2023": 1958490.50,
+        "june2022": 1742777.18
+      }
+    },
+    "assets": {
+      "cashAndBalancesWithRBI": {
+        "june2023": 68839.14,
+        "march2023": 68648.94,
+        "june2022": 90798.15
+      },
+      "balancesWithBanksAndMoneyAtCall": {
+        "june2023": 58589.88,
+        "march2023": 67807.55,
+        "june2022": 36791.44
+      },
+      "investments": {
+        "june2023": 692709.14,
+        "march2023": 639551.97,
+        "june2022": 565576.78
+      },
+      "advances": {
+        "june2023": 1124875.06,
+        "march2023": 1083866.32,
+        "june2022": 957206.97
+      },
+      "fixedAssets": {
+        "june2023": 11154.20,
+        "march2023": 10969.00,
+        "june2022": 10654.95
+      },
+      "otherAssets": {
+        "june2023": 83628.65,
+        "march2023": 87545.39,
+        "june2022": 81647.56
+      },
+      "goodwillOnConsolidation": {
+        "june2023": 101.33,
+        "march2023": 101.33,
+        "june2022": 101.33
+      },
+      "totalAssets": {
+        "june2023": 2039897.40,
+        "march2023": 1958490.50,
+        "june2022": 1742777.18
+      }
+    }
+  }
+}
