@@ -1,0 +1,395 @@
+{
+  "dataset_info": {
+    "name": "ICICI Bank Financial Q&A Dataset - Comprehensive",
+    "version": "2.0",
+    "total_questions": 40,
+    "questions_per_category": 10,
+    "evaluation_metrics": ["Answer Accuracy", "Answer Relevance", "Chunk Precision", "Chunk Recall", "Chunk F1", "Context Precision", "Context Recall", "Faithfulness"],
+    "categories": ["Direct Fact Retrieval", "Numerical Extraction", "Trend Analysis", "Comparative Questions"]
+  },
+  "questions": [
+    
+    {
+      "id": "DF01",
+      "category": "Direct Fact Retrieval",
+      "question": "What was ICICI Bank's net profit in Q1 FY2024?",
+      "ground_truth_answer": "₹10,636 crore",
+      "key_supporting_facts": ["Q1 FY2024 net profit", "10,636 crore"],
+      "expected_relevant_chunks": ["icici_q1_fy2024_profitability_analysis"],
+      "evaluation_focus": ["Answer Accuracy", "Chunk Precision"]
+    },
+    {
+      "id": "DF02",
+      "category": "Direct Fact Retrieval",
+      "question": "What was the retail banking segment revenue in Q2 FY2024?",
+      "ground_truth_answer": "₹33,080 crore",
+      "key_supporting_facts": ["Q2 FY2024", "retail banking segment", "33,080 crore"],
+      "expected_relevant_chunks": ["icici_q2_fy2024_segment_performance"],
+      "evaluation_focus": ["Answer Accuracy", "Entity Extraction"]
+    },
+    {
+      "id": "DF03",
+      "category": "Direct Fact Retrieval",
+      "question": "What was treasury segment's margin in Q3 FY2024?",
+      "ground_truth_answer": "10.9%",
+      "key_supporting_facts": ["Q3 FY2024", "treasury segment", "margin", "10.9%"],
+      "expected_relevant_chunks": ["icici_q3_fy2024_segment_performance"],
+      "evaluation_focus": ["Answer Accuracy", "Numerical Precision"]
+    },
+    {
+      "id": "DF04",
+      "category": "Direct Fact Retrieval",
+      "question": "What was ICICI's operating profit in Q4 FY2024?",
+      "ground_truth_answer": "₹16,752 crore",
+      "key_supporting_facts": ["Q4 FY2024", "operating profit", "16,752 crore"],
+      "expected_relevant_chunks": ["icici_q4_fy2024_profitability_analysis"],
+      "evaluation_focus": ["Answer Accuracy", "Chunk Recall"]
+    },
+    {
+      "id": "DF05",
+      "category": "Direct Fact Retrieval",
+      "question": "What was the growth rate of net profit in Q2 FY2024?",
+      "ground_truth_answer": "36.1%",
+      "key_supporting_facts": ["Q2 FY2024", "net profit", "growth rate", "36.1%"],
+      "expected_relevant_chunks": ["icici_q2_fy2024_profitability_analysis"],
+      "evaluation_focus": ["Answer Accuracy", "Growth Metrics"]
+    },
+    {
+      "id": "DF06",
+      "category": "Direct Fact Retrieval",
+      "question": "What was wholesale banking segment revenue in Q1 FY2024?",
+      "ground_truth_answer": "₹16,960 crore",
+      "key_supporting_facts": ["Q1 FY2024", "wholesale banking", "16,960 crore"],
+      "expected_relevant_chunks": ["icici_q1_fy2024_segment_performance"],
+      "evaluation_focus": ["Answer Accuracy", "Segment Data"]
+    },
+    {
+      "id": "DF07",
+      "category": "Direct Fact Retrieval",
+      "question": "What was ICICI's total income in Q3 FY2024?",
+      "ground_truth_answer": "₹59,480 crore",
+      "key_supporting_facts": ["Q3 FY2024", "total income", "59,480 crore"],
+      "expected_relevant_chunks": ["icici_q3_fy2024_profitability_analysis"],
+      "evaluation_focus": ["Answer Accuracy", "Income Metrics"]
+    },
+    {
+      "id": "DF08",
+      "category": "Direct Fact Retrieval",
+      "question": "What was life insurance segment margin in Q4 FY2024?",
+      "ground_truth_answer": "1.4%",
+      "key_supporting_facts": ["Q4 FY2024", "life insurance segment", "1.4%"],
+      "expected_relevant_chunks": ["icici_q4_fy2024_segment_performance"],
+      "evaluation_focus": ["Answer Accuracy", "Margin Data"]
+    },
+    {
+      "id": "DF09",
+      "category": "Direct Fact Retrieval",
+      "question": "What was the basic EPS in Q1 FY2024?",
+      "ground_truth_answer": "₹15.22 per share",
+      "key_supporting_facts": ["Q1 FY2024", "basic EPS", "15.22 per share"],
+      "expected_relevant_chunks": ["icici_q1_fy2024_key_ratios"],
+      "evaluation_focus": ["Answer Accuracy", "Ratio Metrics"]
+    },
+    {
+      "id": "DF10",
+      "category": "Direct Fact Retrieval",
+      "question": "What was customer deposits amount in Q2 FY2024?",
+      "ground_truth_answer": "₹1,325,253 crore",
+      "key_supporting_facts": ["Q2 FY2024", "customer deposits", "1,325,253 crore"],
+      "expected_relevant_chunks": ["icici_q2_fy2024_balance_sheet_health"],
+      "evaluation_focus": ["Answer Accuracy", "Balance Sheet"]
+    },
+    {
+      "id": "NE01",
+      "category": "Numerical Extraction",
+      "question": "How much did treasury segment revenue increase from Q1 to Q2 FY2024?",
+      "ground_truth_answer": "5.4% increase (from ₹26,306 crore to ₹27,719 crore)",
+      "key_supporting_facts": ["Q1 treasury 26,306 crore", "Q2 treasury 27,719 crore", "5.4% increase"],
+      "expected_relevant_chunks": ["icici_q1_fy2024_segment_performance", "icici_q2_fy2024_segment_performance"],
+      "evaluation_focus": ["Multi-chunk Retrieval", "Growth Calculation"]
+    },
+    {
+      "id": "NE02",
+      "category": "Numerical Extraction",
+      "question": "What was the absolute change in net profit from Q2 to Q3 FY2024?",
+      "ground_truth_answer": "₹157 crore increase (from ₹10,896 crore to ₹11,053 crore)",
+      "key_supporting_facts": ["Q2 net profit 10,896 crore", "Q3 net profit 11,053 crore", "157 crore increase"],
+      "expected_relevant_chunks": ["icici_q2_fy2024_profitability_analysis", "icici_q3_fy2024_profitability_analysis"],
+      "evaluation_focus": ["Temporal Comparison", "Absolute Calculation"]
+    },
+    {
+      "id": "NE03",
+      "category": "Numerical Extraction",
+      "question": "How much did retail banking margin change from Q1 to Q4 FY2024?",
+      "ground_truth_answer": "1.6 percentage point increase (from 13.5% to 15.1%)",
+      "key_supporting_facts": ["Q1 retail margin 13.5%", "Q4 retail margin 15.1%", "1.6pp increase"],
+      "expected_relevant_chunks": ["icici_q1_fy2024_segment_performance", "icici_q4_fy2024_segment_performance"],
+      "evaluation_focus": ["Margin Analysis", "Percentage Point Calculation"]
+    },
+    {
+      "id": "NE04",
+      "category": "Numerical Extraction",
+      "question": "What was the percentage growth in life insurance revenue from Q3 to Q4 FY2024?",
+      "ground_truth_answer": "36.4% growth (from ₹13,150 crore to ₹17,935 crore)",
+      "key_supporting_facts": ["Q3 life insurance 13,150 crore", "Q4 life insurance 17,935 crore", "36.4% growth"],
+      "expected_relevant_chunks": ["icici_q3_fy2024_segment_performance", "icici_q4_fy2024_segment_performance"],
+      "evaluation_focus": ["Growth Calculation", "Segment Analysis"]
+    },
+    {
+      "id": "NE05",
+      "category": "Numerical Extraction",
+      "question": "How much did total income grow from Q1 to Q4 FY2024?",
+      "ground_truth_answer": "28.8% growth (from ₹52,084 crore to ₹67,082 crore)",
+      "key_supporting_facts": ["Q1 total income 52,084 crore", "Q4 total income 67,082 crore", "28.8% growth"],
+      "expected_relevant_chunks": ["icici_q1_fy2024_profitability_analysis", "icici_q4_fy2024_profitability_analysis"],
+      "evaluation_focus": ["Revenue Growth", "Multi-quarter Analysis"]
+    },
+    {
+      "id": "NE06",
+      "category": "Numerical Extraction",
+      "question": "What was the change in customer deposits from Q2 to Q3 FY2024?",
+      "ground_truth_answer": "3.1% increase (from ₹1,325,253 crore to ₹1,366,842 crore)",
+      "key_supporting_facts": ["Q2 deposits 1,325,253 crore", "Q3 deposits 1,366,842 crore", "3.1% increase"],
+      "expected_relevant_chunks": ["icici_q2_fy2024_balance_sheet_health", "icici_q3_fy2024_balance_sheet_health"],
+      "evaluation_focus": ["Balance Sheet Growth", "Funding Analysis"]
+    },
+    {
+      "id": "NE07",
+      "category": "Numerical Extraction",
+      "question": "How much did wholesale banking revenue change from Q2 to Q3 FY2024?",
+      "ground_truth_answer": "11.9% increase (from ₹17,384 crore to ₹19,455 crore)",
+      "key_supporting_facts": ["Q2 wholesale 17,384 crore", "Q3 wholesale 19,455 crore", "11.9% increase"],
+      "expected_relevant_chunks": ["icici_q2_fy2024_segment_performance", "icici_q3_fy2024_segment_performance"],
+      "evaluation_focus": ["Segment Growth", "Revenue Analysis"]
+    },
+    {
+      "id": "NE08",
+      "category": "Numerical Extraction",
+      "question": "What was the difference in operating profit between Q1 and Q3 FY2024?",
+      "ground_truth_answer": "₹502 crore increase (from ₹15,660 crore to ₹16,162 crore)",
+      "key_supporting_facts": ["Q1 operating profit 15,660 crore", "Q3 operating profit 16,162 crore", "502 crore increase"],
+      "expected_relevant_chunks": ["icici_q1_fy2024_profitability_analysis", "icici_q3_fy2024_profitability_analysis"],
+      "evaluation_focus": ["Operational Performance", "Absolute Change"]
+    },
+    {
+      "id": "NE09",
+      "category": "Numerical Extraction",
+      "question": "How much did total equity grow from Q1 to Q4 FY2024?",
+      "ground_truth_answer": "13.1% growth (from ₹225,150 crore to ₹254,738 crore)",
+      "key_supporting_facts": ["Q1 total equity 225,150 crore", "Q4 total equity 254,738 crore", "13.1% growth"],
+      "expected_relevant_chunks": ["icici_q1_fy2024_balance_sheet_health", "icici_q4_fy2024_balance_sheet_health"],
+      "evaluation_focus": ["Capital Growth", "Equity Analysis"]
+    },
+    {
+      "id": "NE10",
+      "category": "Numerical Extraction",
+      "question": "What was the change in others segment margin from Q1 to Q4 FY2024?",
+      "ground_truth_answer": "14.3 percentage point decrease (from 42.1% to 27.8%)",
+      "key_supporting_facts": ["Q1 others margin 42.1%", "Q4 others margin 27.8%", "14.3pp decrease"],
+      "expected_relevant_chunks": ["icici_q1_fy2024_segment_performance", "icici_q4_fy2024_segment_performance"],
+      "evaluation_focus": ["Margin Decline", "Segment Analysis"]
+    },
+    {
+      "id": "TA01",
+      "category": "Trend Analysis",
+      "question": "How did ICICI's net profit trend evolve across all four quarters of FY2024?",
+      "ground_truth_answer": "Consistent growth: Q1: ₹10,636 crore (+44.0%), Q2: ₹10,896 crore (+36.1%), Q3: ₹11,053 crore (+25.7%), Q4: ₹11,672 crore (+18.5%)",
+      "key_supporting_facts": ["Q1-Q4 net profit values", "quarterly growth rates", "consistent upward trend"],
+      "expected_relevant_chunks": ["icici_q1_fy2024_profitability_analysis", "icici_q2_fy2024_profitability_analysis", "icici_q3_fy2024_profitability_analysis", "icici_q4_fy2024_profitability_analysis"],
+      "evaluation_focus": ["Multi-chunk Integration", "Trend Recognition"]
+    },
+    {
+      "id": "TA02",
+      "category": "Trend Analysis",
+      "question": "Which quarter showed the highest year-over-year growth in net profit?",
+      "ground_truth_answer": "Q1 FY2024 with 44.0% growth",
+      "key_supporting_facts": ["Q1 growth rate 44.0%", "highest among all quarters"],
+      "expected_relevant_chunks": ["icici_q1_fy2024_profitability_analysis", "icici_q2_fy2024_profitability_analysis", "icici_q3_fy2024_profitability_analysis", "icici_q4_fy2024_profitability_analysis"],
+      "evaluation_focus": ["Comparative Analysis", "Peak Detection"]
+    },
+    {
+      "id": "TA03",
+      "category": "Trend Analysis",
+      "question": "How did retail banking's margin performance change throughout FY2024?",
+      "ground_truth_answer": "Fluctuating trend: Q1: 13.5%, Q2: 14.8% (+1.3pp), Q3: 12.6% (-2.2pp), Q4: 15.1% (+2.5pp)",
+      "key_supporting_facts": ["Q1-Q4 retail margins", "quarterly changes", "fluctuating pattern"],
+      "expected_relevant_chunks": ["icici_q1_fy2024_segment_performance", "icici_q2_fy2024_segment_performance", "icici_q3_fy2024_segment_performance", "icici_q4_fy2024_segment_performance"],
+      "evaluation_focus": ["Segment Trend Analysis", "Margin Volatility"]
+    },
+    {
+      "id": "TA04",
+      "category": "Trend Analysis",
+      "question": "What was the average quarterly revenue growth rate for treasury segment in FY2024?",
+      "ground_truth_answer": "4.8% average quarterly growth",
+      "key_supporting_facts": ["Q1-Q2: 5.4%", "Q2-Q3: 5.9%", "Q3-Q4: 3.3%", "average 4.8%"],
+      "expected_relevant_chunks": ["icici_q1_fy2024_segment_performance", "icici_q2_fy2024_segment_performance", "icici_q3_fy2024_segment_performance", "icici_q4_fy2024_segment_performance"],
+      "evaluation_focus": ["Mathematical Reasoning", "Average Calculation"]
+    },
+    {
+      "id": "TA05",
+      "category": "Trend Analysis",
+      "question": "In which quarter did wholesale banking achieve its peak margin?",
+      "ground_truth_answer": "Q3 FY2024 with 29.5% margin",
+      "key_supporting_facts": ["Q3 wholesale margin 29.5%", "highest across quarters"],
+      "expected_relevant_chunks": ["icici_q1_fy2024_segment_performance", "icici_q2_fy2024_segment_performance", "icici_q3_fy2024_segment_performance", "icici_q4_fy2024_segment_performance"],
+      "evaluation_focus": ["Peak Detection", "Segment Analysis"]
+    },
+    {
+      "id": "TA06",
+      "category": "Trend Analysis",
+      "question": "How did operating profit trend across all quarters in FY2024?",
+      "ground_truth_answer": "Steady growth: Q1: ₹15,660 crore, Q2: ₹15,473 crore (-1.2%), Q3: ₹16,162 crore (+4.5%), Q4: ₹16,752 crore (+3.6%)",
+      "key_supporting_facts": ["Q1-Q4 operating profit values", "quarterly changes", "overall upward trend"],
+      "expected_relevant_chunks": ["icici_q1_fy2024_profitability_analysis", "icici_q2_fy2024_profitability_analysis", "icici_q3_fy2024_profitability_analysis", "icici_q4_fy2024_profitability_analysis"],
+      "evaluation_focus": ["Operational Trend", "Growth Analysis"]
+    },
+    {
+      "id": "TA07",
+      "category": "Trend Analysis",
+      "question": "What was the trend in net margin across all quarters of FY2024?",
+      "ground_truth_answer": "Declining trend: Q1: 20.4%, Q2: 19.0% (-1.4pp), Q3: 18.6% (-0.4pp), Q4: 17.4% (-1.2pp)",
+      "key_supporting_facts": ["Q1-Q4 net margins", "consistent decline", "margin compression"],
+      "expected_relevant_chunks": ["icici_q1_fy2024_profitability_analysis", "icici_q2_fy2024_profitability_analysis", "icici_q3_fy2024_profitability_analysis", "icici_q4_fy2024_profitability_analysis"],
+      "evaluation_focus": ["Margin Trend", "Profitability Analysis"]
+    },
+    {
+      "id": "TA08",
+      "category": "Trend Analysis",
+      "question": "How did life insurance segment revenue evolve throughout FY2024?",
+      "ground_truth_answer": "Growth acceleration: Q1: ₹9,958 crore, Q2: ₹13,413 crore (+34.7%), Q3: ₹13,150 crore (-2.0%), Q4: ₹17,935 crore (+36.4%)",
+      "key_supporting_facts": ["Q1-Q4 life insurance revenue", "volatile growth pattern", "strong Q4 performance"],
+      "expected_relevant_chunks": ["icici_q1_fy2024_segment_performance", "icici_q2_fy2024_segment_performance", "icici_q3_fy2024_segment_performance", "icici_q4_fy2024_segment_performance"],
+      "evaluation_focus": ["Segment Evolution", "Growth Volatility"]
+    },
+    {
+      "id": "TA09",
+      "category": "Trend Analysis",
+      "question": "What was the trend in cost ratio across all quarters of FY2024?",
+      "ground_truth_answer": "Rising trend: Q1: 69.9%, Q2: 73.0% (+3.1pp), Q3: 72.8% (-0.2pp), Q4: 75.0% (+2.2pp)",
+      "key_supporting_facts": ["Q1-Q4 cost ratios", "overall increase", "cost pressure"],
+      "expected_relevant_chunks": ["icici_q1_fy2024_profitability_analysis", "icici_q2_fy2024_profitability_analysis", "icici_q3_fy2024_profitability_analysis", "icici_q4_fy2024_profitability_analysis"],
+      "evaluation_focus": ["Cost Management Trend", "Efficiency Analysis"]
+    },
+    {
+      "id": "TA10",
+      "category": "Trend Analysis",
+      "question": "How did total income growth rates trend across quarters in FY2024?",
+      "ground_truth_answer": "Moderating growth: Q1: +32.8% YoY, Q2: +26.8% YoY, Q3: +24.3% YoY, Q4: +24.4% YoY",
+      "key_supporting_facts": ["Q1-Q4 growth rates", "decelerating trend", "stabilization in Q3-Q4"],
+      "expected_relevant_chunks": ["icici_q1_fy2024_profitability_analysis", "icici_q2_fy2024_profitability_analysis", "icici_q3_fy2024_profitability_analysis", "icici_q4_fy2024_profitability_analysis"],
+      "evaluation_focus": ["Growth Rate Trend", "Revenue Analysis"]
+    },
+    {
+      "id": "CQ01",
+      "category": "Comparative Questions",
+      "question": "Which business segment contributed the most revenue in Q2 FY2024?",
+      "ground_truth_answer": "Retail banking segment with ₹33,080 crore (34.9% of total segment revenue)",
+      "key_supporting_facts": ["Q2 retail banking revenue 33,080 crore", "highest among segments", "34.9% share"],
+      "expected_relevant_chunks": ["icici_q2_fy2024_segment_performance"],
+      "evaluation_focus": ["Ranking Analysis", "Segment Comparison"]
+    },
+    {
+      "id": "CQ02",
+      "category": "Comparative Questions",
+      "question": "Compare the margin performance of retail banking vs treasury segment in Q3 FY2024.",
+      "ground_truth_answer": "Retail banking outperformed with 12.6% margin vs treasury's 10.9% margin (1.7 percentage point difference)",
+      "key_supporting_facts": ["Q3 retail margin 12.6%", "Q3 treasury margin 10.9%", "retail higher by 1.7pp"],
+      "expected_relevant_chunks": ["icici_q3_fy2024_segment_performance"],
+      "evaluation_focus": ["Segment Comparison", "Margin Analysis"]
+    },
+    {
+      "id": "CQ03",
+      "category": "Comparative Questions",
+      "question": "Which quarter had the best overall profitability in terms of net profit margin?",
+      "ground_truth_answer": "Q1 FY2024 with 20.4% net profit margin",
+      "key_supporting_facts": ["Q1 net margin 20.4%", "highest across quarters"],
+      "expected_relevant_chunks": ["icici_q1_fy2024_profitability_analysis", "icici_q2_fy2024_profitability_analysis", "icici_q3_fy2024_profitability_analysis", "icici_q4_fy2024_profitability_analysis"],
+      "evaluation_focus": ["Quarter Comparison", "Profitability Ranking"]
+    },
+    {
+      "id": "CQ04",
+      "category": "Comparative Questions",
+      "question": "Between Q1 and Q4 FY2024, which segments showed margin improvement?",
+      "ground_truth_answer": "Retail banking improved by 1.6pp (13.5% to 15.1%) and wholesale banking improved by 4.9pp (24.1% to 29.0%)",
+      "key_supporting_facts": ["retail +1.6pp", "wholesale +4.9pp", "margin improvements"],
+      "expected_relevant_chunks": ["icici_q1_fy2024_segment_performance", "icici_q4_fy2024_segment_performance"],
+      "evaluation_focus": ["Temporal Comparison", "Segment Performance"]
+    },
+    {
+      "id": "CQ05",
+      "category": "Comparative Questions",
+      "question": "What was the revenue contribution ranking of all segments in Q4 FY2024?",
+      "ground_truth_answer": "1. Retail banking: ₹36,410 crore (33.3%), 2. Treasury: ₹30,321 crore (27.7%), 3. Wholesale: ₹18,873 crore (17.2%), 4. Life insurance: ₹17,935 crore (16.4%), 5. Others: ₹5,908 crore (5.4%)",
+      "key_supporting_facts": ["Q4 segment revenues", "ranking order", "percentage contributions"],
+      "expected_relevant_chunks": ["icici_q4_fy2024_segment_performance"],
+      "evaluation_focus": ["Complete Ranking", "Revenue Analysis"]
+    },
+    {
+      "id": "CQ06",
+      "category": "Comparative Questions",
+      "question": "Which segment had the highest margin in Q1 FY2024?",
+      "ground_truth_answer": "Others segment with 42.1% margin",
+      "key_supporting_facts": ["Q1 others margin 42.1%", "highest among all segments"],
+      "expected_relevant_chunks": ["icici_q1_fy2024_segment_performance"],
+      "evaluation_focus": ["Margin Ranking", "Segment Efficiency"]
+    },
+    {
+      "id": "CQ07",
+      "category": "Comparative Questions",
+      "question": "Compare net profit growth rates across all quarters of FY2024.",
+      "ground_truth_answer": "Q1 had highest growth at 44.0% YoY, followed by Q2 at 36.1%, Q3 at 25.7%, and Q4 at 18.5%",
+      "key_supporting_facts": ["Q1: 44.0%", "Q2: 36.1%", "Q3: 25.7%", "Q4: 18.5%", "declining trend"],
+      "expected_relevant_chunks": ["icici_q1_fy2024_profitability_analysis", "icici_q2_fy2024_profitability_analysis", "icici_q3_fy2024_profitability_analysis", "icici_q4_fy2024_profitability_analysis"],
+      "evaluation_focus": ["Growth Comparison", "Quarterly Analysis"]
+    },
+    {
+      "id": "CQ08",
+      "category": "Comparative Questions",
+      "question": "Which segment showed the most volatile margin performance across FY2024?",
+      "ground_truth_answer": "Others segment with margins ranging from 27.8% to 46.4% (18.6 percentage point range)",
+      "key_supporting_facts": ["others segment volatility", "wide margin range", "high variability"],
+      "expected_relevant_chunks": ["icici_q1_fy2024_segment_performance", "icici_q2_fy2024_segment_performance", "icici_q3_fy2024_segment_performance", "icici_q4_fy2024_segment_performance"],
+      "evaluation_focus": ["Volatility Analysis", "Segment Stability"]
+    },
+    {
+      "id": "CQ09",
+      "category": "Comparative Questions",
+      "question": "Compare the revenue growth of retail banking vs wholesale banking from Q1 to Q4.",
+      "ground_truth_answer": "Retail banking grew 17.2% (₹31,057 to ₹36,410 crore) vs wholesale banking 11.3% (₹16,960 to ₹18,873 crore)",
+      "key_supporting_facts": ["retail growth 17.2%", "wholesale growth 11.3%", "retail outperformed"],
+      "expected_relevant_chunks": ["icici_q1_fy2024_segment_performance", "icici_q4_fy2024_segment_performance"],
+      "evaluation_focus": ["Growth Comparison", "Segment Performance"]
+    },
+    {
+      "id": "CQ10",
+      "category": "Comparative Questions",
+      "question": "Which quarter had the lowest cost ratio?",
+      "ground_truth_answer": "Q1 FY2024 with 69.9% cost ratio",
+      "key_supporting_facts": ["Q1 cost ratio 69.9%", "lowest across quarters", "best efficiency"],
+      "expected_relevant_chunks": ["icici_q1_fy2024_profitability_analysis", "icici_q2_fy2024_profitability_analysis", "icici_q3_fy2024_profitability_analysis", "icici_q4_fy2024_profitability_analysis"],
+      "evaluation_focus": ["Efficiency Comparison", "Cost Management"]
+    }
+  ],
+  "evaluation_guidelines": {
+    "answer_accuracy": {
+      "exact_match": "Answer exactly matches ground truth",
+      "numerical_tolerance": "±2% for percentages, ±₹50 crore for absolute values"
+    },
+    "answer_relevance": {
+      "definition": "How well the answer addresses the specific question asked",
+      "scale": "0.0 (completely irrelevant) to 1.0 (perfectly relevant)"
+    },
+    "chunk_metrics": {
+      "precision": "Relevant chunks retrieved / Total chunks retrieved",
+      "recall": "Relevant chunks retrieved / Total relevant chunks available"
+    },
+    "context_metrics": {
+      "precision": "How much retrieved content is relevant to the question",
+      "recall": "How much necessary information was retrieved to answer fully"
+    },
+    "faithfulness": {
+      "definition": "Percentage of answer claims supported by retrieved context",
+      "calculation": "Claims with supporting evidence / Total claims made"
+    }
+  }
+}
