@@ -3,7 +3,7 @@ from neo4j import GraphDatabase
 import json
 import re
 from sentence_transformers import SentenceTransformer
-genai.configure(api_key="AIzaSyD6YknQ0kPpFO5Xtb175B47mTzYcJPJtDM")
+genai.configure(api_key="")
 import time
 
 class SimpleRateLimiter:
