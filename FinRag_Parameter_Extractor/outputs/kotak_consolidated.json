@@ -1,0 +1,69 @@
+{
+  "company": "Kotak",
+  "reportType": "Consolidated Financial Results",
+  "currency": "\u20b9 in crore",
+  "periods": {
+    "yearEnded": {
+      "march2024": {
+        "date": "March 31, 2023 (FY2023)",
+        "status": "Audited"
+      }
+    }
+  },
+  "financialResults": {
+    "income": {
+      "interestEarned": {
+        "march2024Annual": "118222.34"
+      },
+      "otherIncome": {
+        "march2024Annual": "21700.45"
+      },
+      "totalIncome": {
+        "march2024Annual": "139922.79"
+      }
+    },
+    "expenses": {
+      "interestExpended": {
+        "march2024Annual": "48250.55"
+      },
+      "operatingExpenses": {
+        "march2024Annual": "34100.30"
+      },
+      "totalExpenditure": {
+        "march2024Annual": "82350.85"
+      }
+    },
+    "profitAndLoss": {
+      "netProfitForThePeriod": {
+        "march2024Annual": "32110.07"
+      }
+    },
+    "ratios": {
+      "CRAR (%)": {
+        "march2024": "23.3"
+      },
+      "RoA (%)": {
+        "march2024": "2.45"
+      },
+      "EPS": {
+        "basic": {
+          "march2024": "74.96"
+        },
+        "diluted": {
+          "march2024": "73.85"
+        }
+      },
+      "Book Value Per Share (\u20b9)": {
+        "march2024": "562.55"
+      }
+    },
+    "npaRatios": {
+      "grossNPAPercentage": {
+        "march2024": "1.78"
+      },
+      "netNPAPercentage": {
+        "march2024": "0.37"
+      }
+    }
+  }
+}

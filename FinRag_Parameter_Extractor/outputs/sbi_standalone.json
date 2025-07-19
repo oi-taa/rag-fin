@@ -1,0 +1,34 @@
+{
+  "company": "TEST BANK",
+  "reportType": "Standalone Financial Results",
+  "currency": "\u20b9 in crore",
+  "financialResults": {
+    "income": {
+      "interestEarned": {
+        "march2024Annual": "109221.34"
+      },
+      "otherIncome": {
+        "march2024Annual": "19831.45"
+      },
+      "totalIncome": {
+        "march2024Annual": "129062.79"
+      }
+    },
+    "expenses": {
+      "interestExpended": {
+        "march2024Annual": "47102.74"
+      },
+      "operatingExpenses": {
+        "march2024Annual": "32873.24"
+      },
+      "totalExpenditure": {
+        "march2024Annual": "79975.98"
+      }
+    },
+    "profitAndLoss": {
+      "netProfitForThePeriod": {
+        "march2024Annual": "31896.50"
+      }
+    }
+  }
+}

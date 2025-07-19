@@ -1,0 +1,63 @@
+{
+  "company": "Axis-standalone24.pdf",
+  "reportType": "Standalone Financial Results",
+  "currency": "\u20b9 in crore",
+  "periods": {
+    "yearEnded": {
+      "march2024": {
+        "date": "March 31, 2023 (FY2023)",
+        "status": "Audited"
+      }
+    }
+  },
+  "financialResults": {
+    "income": {
+      "interestEarned": {
+        "march2024Annual": "109221.34"
+      },
+      "otherIncome": {
+        "march2024Annual": "19831.45"
+      },
+      "totalIncome": {
+        "march2024Annual": "129062.79"
+      }
+    },
+    "expenses": {
+      "interestExpended": {
+        "march2024Annual": "47102.74"
+      },
+      "operatingExpenses": {
+        "march2024Annual": "32873.24"
+      },
+      "totalExpenditure": {
+        "march2024Annual": "79975.98"
+      }
+    },
+    "profitAndLoss": {
+      "netProfitForThePeriod": {
+        "march2024Annual": "31896.50"
+      }
+    },
+    "ratios": {
+      "CRAR (%)": {
+        "march2024": "22.25"
+      },
+      "RoA (%)": {
+        "march2024": "2.65"
+      },
+      "EPS": {
+        "basic": {
+          "march2024": "82.74"
+        }
+      }
+    },
+    "npaRatios": {
+      "grossNPAPercentage": {
+        "march2024": "2.81"
+      },
+      "netNPAPercentage": {
+        "march2024": "0.48"
+      }
+    }
+  }
+}
