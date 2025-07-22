@@ -1,0 +1,26 @@
+# requirements.txt
+# ICICI Financial Knowledge Graph System
+# Complete dependencies for both Graph Construction + Entity Extraction services
+
+# Core FastAPI stack
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# Database and external APIs
+neo4j==5.15.0
+httpx==0.25.2
+google-generativeai==0.3.2
+
+# Utilities
+python-multipart==0.0.6
+python-dotenv==1.0.0
+
+# Development and testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+
+openai>=1.0.0           
+aiohttp>=3.8.0       
