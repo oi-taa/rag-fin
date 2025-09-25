@@ -14,6 +14,7 @@ from models.financial_models import FinancialChunk
 from services.neo4j_service import Neo4jService
 from services.extraction_service import EntityExtractor
 
+
 logger = logging.getLogger(__name__)
 
 def register_graph_tools(server: FastMCP):
@@ -21,7 +22,7 @@ def register_graph_tools(server: FastMCP):
     
     @server.tool("build_financial_graph", description="Build knowledge graph from financial chunks")
     def mcp_build_graph(chunks: List[Dict], dataset_id: str = "financial_data", clear_existing: bool = False):
-        """Build graph from chunks - fixed async handling"""
+        """Build graph from chunks - auto-detects text vs structured format"""
         try:
             config = get_config()
             neo4j_service = Neo4jService(config.neo4j_uri, config.neo4j_user, config.neo4j_password)
@@ -34,40 +35,41 @@ def register_graph_tools(server: FastMCP):
             
             for chunk_data in chunks:
                 try:
-                    # Convert to FinancialChunk
-                    chunk = FinancialChunk.model_validate(chunk_data)
+                    # Smart format detection and processing
+                    result = safe_chunk_processing(chunk_data, config)
                     
-                    # Extract entities using the working method from extract_and_save_to_graph
-                    extractor = EntityExtractor(config.default_model, config.get_api_key_for_model(config.default_model))
-                    
-                    async def extract_async():
-                        return await extractor.extract(chunk)
-                    
-                    with concurrent.futures.ThreadPoolExecutor() as executor:
-                        future = executor.submit(asyncio.run, extract_async())
-                        entities = future.result(timeout=config.entity_extraction_timeout)
-                    
-                    if not entities.quarter:
+                    if result["status"] == "success":
+                        entities = result["entities"]
+                        chunk_id = result["chunk_id"]
+                        company_name = result.get("company_name", "ICICI Bank")
+                        
+                        # Validate entities
+                        if not entities.quarter:
+                            failed += 1
+                            failed_chunks.append(chunk_id)
+                            continue
+                        
+                        # Save to graph
+                        neo4j_service.save_entities(entities, chunk_id, dataset_id, company_name)
+                        processed += 1
+                        total_entities += len(entities.financial_metrics) + len(entities.business_segments) + len(entities.financial_ratios) + len(entities.balance_sheet_items)
+                        
+                    else:
                         failed += 1
-                        failed_chunks.append(chunk.id)
-                        continue
-                    
-                    # Save entities
-                    neo4j_service.save_entities(entities, chunk.id, dataset_id)
-                    processed += 1
-                    total_entities += len(entities.financial_metrics) + len(entities.business_segments) + len(entities.financial_ratios) + len(entities.balance_sheet_items)
-                    
+                        failed_chunks.append(result.get("chunk_id", "unknown"))
+                        logger.error(f"Chunk processing failed: {result['message']}")
+                        
                 except Exception as e:
-                    logger.error(f"Failed chunk {chunk_data.get('id', 'unknown')}: {e}")
+                    logger.error(f"Failed chunk {chunk_data.get('id', chunk_data.get('company', 'unknown'))}: {e}")
                     failed += 1
-                    failed_chunks.append(chunk_data.get('id', 'unknown'))
+                    failed_chunks.append(chunk_data.get('id', chunk_data.get('company', 'unknown')))
             
             stats = neo4j_service.get_stats()
             neo4j_service.close()
             
             return {
                 "status": "success",
-                "message": "Graph built successfully",
+                "message": "Graph built successfully with smart format detection",
                 "build_result": {
                     "chunks_processed": processed,
                     "chunks_failed": failed,
@@ -84,6 +86,74 @@ def register_graph_tools(server: FastMCP):
                 "message": f"Graph building failed: {str(e)}",
                 "error_details": str(e)
             }
+
+    def safe_chunk_processing(chunk_data: Dict, config) -> Dict:
+        """Process chunk regardless of format - auto-detection"""
+        
+        # Try text format first
+        try:
+            if ("text" in chunk_data and 
+                "id" in chunk_data and 
+                "period" in chunk_data and 
+                "type" in chunk_data and 
+                "size" in chunk_data):
+                
+                logger.info(f"Detected text format chunk: {chunk_data['id']}")
+                
+                # Validate with Pydantic
+                chunk = FinancialChunk.model_validate(chunk_data)
+                
+                # Extract entities using LLM
+                extractor = EntityExtractor(config.default_model, config.get_api_key_for_model(config.default_model))
+                
+                import concurrent.futures
+                async def extract_async():
+                    return await extractor.extract(chunk)
+                
+                with concurrent.futures.ThreadPoolExecutor() as executor:
+                    future = executor.submit(asyncio.run, extract_async())
+                    entities = future.result(timeout=config.entity_extraction_timeout)
+                
+                return {
+                    "status": "success",
+                    "entities": entities,
+                    "chunk_id": chunk.id,
+                    "format_detected": "text"
+                }
+                
+        except Exception as e:
+            logger.debug(f"Text format processing failed: {e}")
+        
+        # Try structured format
+        try:
+            if "financialResults" in chunk_data:
+                logger.info(f"Detected structured format chunk: {chunk_data.get('company', 'unknown')}")
+                
+                # Import the converter function
+                from services.extraction_service import convert_structured_to_entities
+                
+                # Convert directly to entities (no LLM needed) - now returns tuple
+                entities, company_name = convert_structured_to_entities(chunk_data)
+                chunk_id = chunk_data.get("company", f"structured_{int(time.time())}")
+                
+                return {
+                    "status": "success",
+                    "entities": entities,
+                    "chunk_id": chunk_id,
+                    "company_name": company_name,  # Add company name to result
+                    "format_detected": "structured"
+                }
+            
+        except Exception as e:
+            logger.error(f"Structured format processing failed: {e}")
+        
+        # Neither format worked
+        return {
+            "status": "error",
+            "message": f"Unknown chunk format. Expected text format (id, period, type, size, text) or structured format (financialResults). Got: {list(chunk_data.keys())}",
+            "chunk_id": chunk_data.get('id', chunk_data.get('company', 'unknown_format')),
+            "format_detected": "unknown"
+        }
 
     @server.tool("get_graph_stats", description="Get Neo4j knowledge graph statistics")
     def mcp_get_graph_stats():
@@ -141,7 +211,7 @@ def register_graph_tools(server: FastMCP):
                 "error_details": str(e)
             }
 
-    @server.tool("traverse_entity_relationships", description="Find related entities across the knowledge graph")
+    '''@server.tool("traverse_entity_relationships", description="Find related entities across the knowledge graph")
     def mcp_traverse_relationships(entity_name: str, entity_type: str, max_depth: int = 2):
         """Find all entities connected to a specific entity"""
         try:
@@ -271,3 +341,4 @@ def register_graph_tools(server: FastMCP):
                 "message": f"Quarter comparison failed: {str(e)}",
                 "error_details": str(e)
             }
+'''

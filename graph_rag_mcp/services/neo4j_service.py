@@ -45,7 +45,7 @@ class Neo4jService:
         except:
             return False
     
-    def save_entities(self, entities: ExtractedEntities, chunk_id: str, dataset_id: str):
+    def save_entities(self, entities: ExtractedEntities, chunk_id: str, dataset_id: str, company_name: str = "ICICI Bank"):
         """Save all entity types with properties stored ON NODES"""
         
         with self.driver.session() as session:
@@ -53,9 +53,9 @@ class Neo4jService:
             if not quarter:
                 return
             
-            # Create quarter and organization - store properties on QUARTER NODE
+            # Create quarter and organization with dynamic company name
             session.run("""
-                MERGE (org:Organization {name: "ICICI Bank"})
+                MERGE (org:Organization {name: $company_name})
                 MERGE (q:Quarter {period: $quarter})
                 SET q.dataset_id = $dataset_id, 
                     q.source_chunks = COALESCE(q.source_chunks, []) + [$chunk_id],
@@ -70,7 +70,7 @@ class Neo4jService:
                         WHEN $quarter STARTS WITH "Q4" THEN 4
                         ELSE 1 END
                 MERGE (org)-[:HAS_QUARTER]->(q)
-            """, quarter=quarter, dataset_id=dataset_id, chunk_id=chunk_id)
+            """, company_name=company_name, quarter=quarter, dataset_id=dataset_id, chunk_id=chunk_id)
             
             # Save all entity types with properties on NODES
             self._save_metrics(session, quarter, entities.financial_metrics)

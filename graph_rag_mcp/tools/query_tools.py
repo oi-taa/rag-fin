@@ -151,7 +151,7 @@ def register_query_tools(server: FastMCP):
                 "question": question
             }
 
-    @server.tool("execute_raw_cypher", description="Execute raw Cypher queries directly on the graph")
+    '''@server.tool("execute_raw_cypher", description="Execute raw Cypher queries directly on the graph")
     def mcp_execute_cypher(cypher_query: str, parameters: dict = None):
         """Execute raw Cypher query for advanced users"""
         try:
@@ -196,3 +196,4 @@ def register_query_tools(server: FastMCP):
                 "error_details": str(e),
                 "query_attempted": cypher_query
             }
+'''

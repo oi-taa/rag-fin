@@ -136,7 +136,7 @@ def register_health_tools(server: FastMCP):
                 "stats": "get_graph_stats"
             }
         }
-
+'''
     @server.tool("switch_default_model", description="Switch the default LLM model for the server")
     def mcp_switch_model(model_name: str):
         """Switch default model (updates configuration)"""
@@ -219,3 +219,4 @@ def register_health_tools(server: FastMCP):
                 "model_attempted": model_name,
                 "error_details": str(e)
             }
+'''

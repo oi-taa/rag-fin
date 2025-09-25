@@ -110,11 +110,11 @@ SCHEMA:
 Nodes: Organization, Quarter, Metric, Segment, Ratio, BalanceSheetItem
 
 Node Properties:
-- Quarter: {{{{period: "Q1_FY2024", year: 2024, quarter_num: 1}}}}
-- Metric: {{{{name: "NET PROFIT", value: 10636.0, growth_yoy: 44.0, unit: "crore", quarter: "Q1_FY2024"}}}}
-- Segment: {{{{name: "RETAIL BANKING SEGMENT", revenue: 31057.0, margin: 13.5, quarter: "Q1_FY2024"}}}}
-- Ratio: {{{{name: "Cost Ratio", value: 69.9, unit: "percentage", quarter: "Q1_FY2024"}}}}
-- BalanceSheetItem: {{{{name: "Advances", value: 1124875.0, unit: "crore", quarter: "Q1_FY2024"}}}}
+- Quarter: {{period: "Q1_FY2024", year: 2024, quarter_num: 1}}
+- Metric: {{name: "NET PROFIT", value: 10636.0, growth_yoy: 44.0, unit: "crore", quarter: "Q1_FY2024"}}
+- Segment: {{name: "RETAIL BANKING SEGMENT", revenue: 31057.0, margin: 13.5, quarter: "Q1_FY2024"}}
+- Ratio: {{name: "Cost Ratio", value: 69.9, unit: "percentage", quarter: "Q1_FY2024"}}
+- BalanceSheetItem: {{name: "Advances", value: 1124875.0, unit: "crore", quarter: "Q1_FY2024"}}
 
 Relationships:
 - HAS_QUARTER: Organization → Quarter
@@ -134,21 +134,21 @@ BALANCE SHEET: "Advances", "Investments", "Customer Deposits", "Total Assets", "
 QUERY PATTERNS - KEEP SIMPLE:
 
 Single Value:
-MATCH (q:Quarter {{{{period: 'Q1_FY2024'}}}}-[:HAS_RATIO]->(r:Ratio {{{{name: 'Cost Ratio'}}}}))
+MATCH (q:Quarter {{period: 'Q1_FY2024'}})-[:HAS_RATIO]->(r:Ratio {{name: 'Cost Ratio'}})
 RETURN q.period, r.value, r.unit
 
 Trend Analysis (IMPORTANT - Use This Pattern):
-MATCH (q:Quarter)-[:HAS_RATIO]->(r:Ratio {{{{name: 'Cost Ratio'}}}}))
+MATCH (q:Quarter)-[:HAS_RATIO]->(r:Ratio {{name: 'Cost Ratio'}})
 RETURN q.period, r.value
 ORDER BY q.period
 
 Growth Calculation:
-MATCH (q1:Quarter {{{{period: 'Q1_FY2024'}}}}-[:HAS_METRIC]->(m1:Metric {{{{name: 'NET PROFIT'}}}}))
-MATCH (q4:Quarter {{{{period: 'Q4_FY2024'}}}}-[:HAS_METRIC]->(m4:Metric {{{{name: 'NET PROFIT'}}}}))
+MATCH (q1:Quarter {{period: 'Q1_FY2024'}})-[:HAS_METRIC]->(m1:Metric {{name: 'NET PROFIT'}})
+MATCH (q4:Quarter {{period: 'Q4_FY2024'}})-[:HAS_METRIC]->(m4:Metric {{name: 'NET PROFIT'}})
 RETURN q1.period, m1.value AS Q1_Value, q4.period, m4.value AS Q4_Value, round(((m4.value - m1.value) / m1.value * 100), 2) AS Growth_Pct
 
 All Segments:
-MATCH (q:Quarter {{{{period: 'Q1_FY2024'}}}}-[:HAS_SEGMENT_PERFORMANCE]->(s:Segment)
+MATCH (q:Quarter {{period: 'Q1_FY2024'}})-[:HAS_SEGMENT_PERFORMANCE]->(s:Segment)
 RETURN s.name, s.revenue, s.margin
 ORDER BY s.revenue DESC
 
@@ -158,9 +158,38 @@ WHERE s.name IN ['RETAIL BANKING SEGMENT', 'TREASURY SEGMENT']
 RETURN q.period AS Quarter, s.name AS Segment_Name, s.revenue AS Segment_Revenue, s.margin AS Segment_Margin
 ORDER BY q.period, s.revenue DESC
 
+COMPARISON & TREND EXAMPLES (FOLLOW EXACTLY):
+
+Compare Performance Across Quarters:
+MATCH (q:Quarter)-[:HAS_METRIC]->(m:Metric {{name: 'NET PROFIT'}})
+RETURN q.period AS Quarter, m.value AS Net_Profit_Value
+ORDER BY q.period
+
+Compare Segment Performance:
+MATCH (q:Quarter)-[:HAS_SEGMENT_PERFORMANCE]->(s:Segment {{name: 'RETAIL BANKING SEGMENT'}})
+RETURN q.period AS Quarter, s.revenue AS Segment_Revenue, s.margin AS Segment_Margin
+ORDER BY q.period
+
+Multiple Metrics Trend:
+MATCH (q:Quarter)-[:HAS_METRIC]->(m:Metric)
+WHERE m.name IN ['NET PROFIT', 'Operating Profit']
+RETURN q.period AS Quarter, m.name AS Metric_Name, m.value AS Metric_Value
+ORDER BY q.period, m.name
+
+WRONG PATTERNS - NEVER DO THIS:
+❌ MATCH (q:Quarter)-[:HAS_METRIC]->(m:Metric)-[:HAS_QUARTER]->(q)  // Circular reference
+❌ MATCH (q1:Quarter), (q2:Quarter), (q3:Quarter) // Separate quarter matching
+❌ MATCH path = (q:Quarter)-[:HAS_METRIC*]->(m:Metric) // Variable length paths
+
+PATTERN MATCHING:
+- "compare X across quarters" → MATCH (q:Quarter)-[:HAS_X]->(entity) ORDER BY q.period
+- "X performance across quarters" → MATCH (q:Quarter)-[:HAS_X]->(entity) ORDER BY q.period  
+- "trend of X" → MATCH (q:Quarter)-[:HAS_X]->(entity) ORDER BY q.period
+- "X over time" → MATCH (q:Quarter)-[:HAS_X]->(entity) ORDER BY q.period
+
 CRITICAL RULES:
-1. For "trend", "across quarters", "over time": Use single MATCH with ORDER BY q.period
-2. For specific quarter: Use {{{{period: 'Q1_FY2024'}}}}
+1. For "trend", "across quarters", "over time", "compare performance": ALWAYS use pattern MATCH (q:Quarter)-[:HAS_X]->(entity) with ORDER BY q.period
+2. For specific quarter: Use {{period: 'Q1_FY2024'}}
 3. For comparison: Use two separate MATCH statements for different quarters
 4. Use ONLY entity names from the lists above
 5. Never match all quarters separately unless doing specific comparisons
@@ -169,7 +198,7 @@ CRITICAL RULES:
 
 QUESTION TYPES:
 - "trend across quarters" → MATCH (q:Quarter)-[:HAS_X]->(entity) ORDER BY q.period
-- "in Q1 FY2024" → MATCH (q:Quarter {{{{period: 'Q1_FY2024'}}}}-[:HAS_X]->(entity)
+- "in Q1 FY2024" → MATCH (q:Quarter {{period: 'Q1_FY2024'}})-[:HAS_X]->(entity)
 - "compare Q1 and Q4" → Two MATCH statements with q1 and q4
 - "all segments" → MATCH with specific quarter, ORDER BY revenue/margin
 - "compare segments" → WHERE s.name IN ['SEGMENT1', 'SEGMENT2']
@@ -196,6 +225,7 @@ ALWAYS use AS with descriptive names that include the entity type and measure.
 RETURN ONLY THE CYPHER QUERY - Please don't give any explanations. NO EXPLANATIONS :
 
 Query for: "{question}\""""
+    
         
         try:
             response = await self.extractor.client.generate_content(prompt)

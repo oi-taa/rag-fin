@@ -8,8 +8,8 @@ import json
 import re
 import time
 import logging
-from models.financial_models import FinancialChunk, ExtractedEntities
 from providers.llm_providers import GeminiProvider, LlamaProvider, GPTProvider
+from models.financial_models import FinancialChunk, ExtractedEntities, FinancialMetric, FinancialRatio, BusinessSegment, BalanceSheetItem
 
 logger = logging.getLogger(__name__)
 
@@ -20,6 +20,8 @@ class EntityExtractor:
         elif "llama" in model_name: self.client = LlamaProvider(model_name, api_key, **kwargs)
         elif "gpt" in model_name: self.client = GPTProvider(model_name, api_key)
         else: self.client = GeminiProvider("gemini-2.0-flash", api_key)
+    
+    
     
     async def extract(self, chunk: FinancialChunk) -> ExtractedEntities:
         try:
@@ -45,7 +47,8 @@ class EntityExtractor:
             try:
                 parsed = json.loads(json_text)
                 cleaned_data = self._clean_parsed_data(parsed)
-                return ExtractedEntities(**cleaned_data)  # Fixed: use cleaned_data
+                
+                return ExtractedEntities(**cleaned_data)
                 
             except json.JSONDecodeError as e:
                 logger.error(f"JSON parse error: {e}")
@@ -135,6 +138,7 @@ class EntityExtractor:
         6. Include ALL income items, expense items, ratios, segments, balance sheet items
         7. If percentage of total is mentioned, include it
         8. Return null for missing values, don't make up data
+        9. Quarter format: Always use Q#_FY#### (with underscore, not spaces)(e.g. Q1_FY2024)
         
         INCOME STATEMENT ITEMS TO EXTRACT:
         - Total Income, Interest Income, Other Income
@@ -155,8 +159,122 @@ class EntityExtractor:
         Be comprehensive and extract EVERYTHING mentioned!
         Return only valid JSON, NO EXPLANATIONS ONLY VALID JSON!
         """
+def convert_structured_to_entities(structured_data: dict) -> tuple:
+    """Convert structured financial JSON directly to entities and extract company name"""
+    
+    # Extract company name
+    company_raw = structured_data.get("company", "Unknown Company")
+    
+    # Normalize company names
+    if "axis" in company_raw.lower():
+        company_name = "Axis Bank"
+    elif "icici" in company_raw.lower():
+        company_name = "ICICI Bank" 
+    elif "hdfc" in company_raw.lower():
+        company_name = "HDFC Bank"
+    else:
+        # Clean up the raw name (remove file extensions, etc.)
+        company_name = company_raw.replace(".pdf", "").replace("_", " ").strip()
+        if not company_name or company_name == "Unknown Company":
+            company_name = "Unknown Bank"
+    
+    # Extract period (normalize format)
+    period = extract_period_from_structured(structured_data)
+    
+    # Extract financial metrics
+    financial_metrics = []
+    if "financialResults" in structured_data:
+        income = structured_data["financialResults"].get("income", {})
+        expenses = structured_data["financialResults"].get("expenses", {})
+        pnl = structured_data["financialResults"].get("profitAndLoss", {})
+        
+        # Convert income items
+        for key, value_dict in income.items():
+            for period_key, value in value_dict.items():
+                financial_metrics.append(FinancialMetric(
+                    name=normalize_metric_name(key),
+                    value=float(value),
+                    unit="crore"
+                ))
+        
+        # Convert expense items  
+        for key, value_dict in expenses.items():
+            for period_key, value in value_dict.items():
+                financial_metrics.append(FinancialMetric(
+                    name=normalize_metric_name(key),
+                    value=float(value),
+                    unit="crore"
+                ))
+                
+        # Convert P&L items
+        for key, value_dict in pnl.items():
+            for period_key, value in value_dict.items():
+                financial_metrics.append(FinancialMetric(
+                    name=normalize_metric_name(key),
+                    value=float(value),
+                    unit="crore"
+                ))
+    
+    # Extract ratios
+    financial_ratios = []
+    if "financialResults" in structured_data and "ratios" in structured_data["financialResults"]:
+        ratios = structured_data["financialResults"]["ratios"]
+        for ratio_name, ratio_data in ratios.items():
+            if isinstance(ratio_data, dict):
+                for period_key, value in ratio_data.items():
+                    financial_ratios.append(FinancialRatio(
+                        name=ratio_name,
+                        value=float(value),
+                        unit="percentage" if "%" in ratio_name else "ratio"
+                    ))
+    
+    entities = ExtractedEntities(
+        quarter=period,
+        financial_metrics=financial_metrics,
+        financial_ratios=financial_ratios,
+        business_segments=[],  # Not in this data format
+        balance_sheet_items=[]  # Would need to add if present
+    )
+    
+    return entities, company_name
 
-# Helper function for quick extraction (from your code)
+def extract_period_from_structured(data: dict) -> str:
+    """Extract and normalize period from structured data"""
+    # Look for period indicators
+    if "periods" in data:
+        periods = data["periods"]
+        if "yearEnded" in periods:
+            year_data = periods["yearEnded"]
+            if "march2024" in year_data:
+                return "Q4_FY2024"  # March year-end = Q4
+    
+    # Fallback - look in financial data
+    if "financialResults" in data:
+        # Look for march2024Annual pattern
+        for section in data["financialResults"].values():
+            if isinstance(section, dict):
+                for item_data in section.values():
+                    if isinstance(item_data, dict):
+                        for period_key in item_data.keys():
+                            if "march2024" in period_key.lower():
+                                return "Q4_FY2024"
+    
+    # Default fallback
+    return "FY2024"
+
+def normalize_metric_name(raw_name: str) -> str:
+    """Normalize metric names to match your schema"""
+    mapping = {
+        "interestEarned": "Interest Income",
+        "otherIncome": "Other Income", 
+        "totalIncome": "Total Income",
+        "interestExpended": "Interest Expenses",
+        "operatingExpenses": "Operating Expenses", 
+        "totalExpenditure": "Total Expenses",
+        "netProfitForThePeriod": "NET PROFIT"
+    }
+    return mapping.get(raw_name, raw_name.replace("_", " ").title())
+
 async def quick_extract(chunk_text: str, model: str = "gemini-2.0-flash", api_key: str = None) -> ExtractedEntities:
     """Quick extraction for testing"""
     chunk = FinancialChunk(id="test_chunk", period="Q1_FY2024", type="test", size=len(chunk_text), text=chunk_text)
