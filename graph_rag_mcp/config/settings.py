@@ -31,7 +31,7 @@ class GraphRAGConfig:
     log_level: str = os.getenv("LOG_LEVEL", "INFO")
     
     # Server Configuration
-    port: int = int(os.getenv("GRAPH_RAG_PORT", "9008"))
+    port: int = int(os.getenv("GRAPH_RAG_PORT", "9007"))
     host: str = os.getenv("GRAPH_RAG_HOST", "0.0.0.0")
     
     @property

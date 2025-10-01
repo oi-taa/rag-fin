@@ -15,7 +15,7 @@ Dependencies:
 - Neo4j running on localhost:7687 (or configured URI)
 - API keys for LLM providers
 
-Port: 9008
+Port: 9007
 """
 
 import os
