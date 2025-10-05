@@ -1,0 +1,5 @@
+fastmcp
+pymilvus==2.3.0
+sentence-transformers==2.7.0
+google-generativeai==0.3.2
+python-dotenv==1.0.0
